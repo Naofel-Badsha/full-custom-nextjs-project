@@ -15,7 +15,7 @@ const Navbar = () => {
           {/*----------Desktop------Menu----------*/}
 
           {/*------------Menu----------*/}
-          <ul className="flex items-center">
+          <ul className="lg:flex items-center hidden gap-x-1">
             {Menus.map((menu) => (
               <DesktopMenu menu={menu} key={menu.name}>
               </DesktopMenu>
