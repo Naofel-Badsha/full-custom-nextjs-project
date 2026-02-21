@@ -2,6 +2,7 @@
 import React from "react";
 import { Menus } from "../../utils/navbaricon";
 import DesktopMenu from "./DesktopMenu";
+import MobilMenu from "./MobilMenu";
 const Navbar = () => {
   return (
     <div>
@@ -17,14 +18,18 @@ const Navbar = () => {
           {/*------------Menu----------*/}
           <ul className="lg:flex items-center hidden gap-x-1">
             {Menus.map((menu) => (
-              <DesktopMenu menu={menu} key={menu.name}>
-              </DesktopMenu>
+              <DesktopMenu menu={menu} key={menu.name}></DesktopMenu>
             ))}
           </ul>
 
           {/*----------Singup--------Button---------*/}
-          <div>
-            <button className="btn text-white rounded-xl px-3 py-1 bg-white/5 cursor-pointer">SingUp</button>
+          <div className="flex items-center gap-x-5">
+            <button className="btn text-white rounded-xl px-3 py-1 bg-white/5 cursor-pointer">
+              SingUp
+            </button>
+            <div className="lg:hidden">
+              <MobilMenu Menus={Menus}/>
+            </div>
           </div>
         </nav>
       </header>
