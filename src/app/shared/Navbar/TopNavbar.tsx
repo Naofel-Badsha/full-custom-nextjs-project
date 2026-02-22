@@ -12,8 +12,8 @@ import {
 
 const TopNavbar = () => {
   return (
-    <div className="bg-[#005224] px-6 py-5 lg:px-8">
-      <div className="flex items-center justify-between">
+    <div className="bg-[#005224] ">
+      <div className="flex items-center justify-between mx-auto max-w-7xl px-6 py-5 lg:px-8">
         <div className="flex gap-4">
           {/*-------1-------*/}
           <div className="flex gap-1.5 cursor-pointer group ">

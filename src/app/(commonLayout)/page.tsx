@@ -1,8 +1,11 @@
 import React from 'react'
+import Hero from '../components/HomePagesAllSection/HeroSection/Hero'
 
 const Homepage = () => {
   return (
-    <div className=' h-[100vh] py-20'>Homepage</div>
+    <div className=''>
+      <Hero />
+    </div>
   )
 }
 
