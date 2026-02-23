@@ -58,9 +58,14 @@ const HAboutUsSection = () => {
 
                 {/*-----------Right-------Side---------*/}
                 <div className="flex-1">
-                    <div className="">
-                      <span className="py-3 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">About Us</span>
-
+                    <div className="space-y-5">
+                        <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-semibold ">About Us</div>
+                        <h2 className="text-[#1d1d1d] font-semibold text-[42px] capitalize leading-13">Provide information about reading insurance, generate leads, policies.</h2>
+                        <p className="text-[18px] font-light text-[#6d6d6d]">Proin ultricies vel urna pulvinar pulvinar. Morbi condimentum dolor vel tellus laoreet, eu auctor erat sodales. Suspendisse dictum magna semper maximus lacinia. Pellentesque fringilla et augue aliquam elementum.</p>
+                        <p className="text-[18px] font-light text-[#6d6d6d]">Nunc eget quam vel justo aliquam sagittis in sit amet lorem. Donec sem nisi, bibendum sed laoreet in, malesuada quis neque.</p>
+                     <div className="bg-[#E6F7EE] p-6 border-l-3 border-[#00863F]">
+                       <p className="text-[#1d1d1d] text-[19px] font-semibold ">A house is made of walls and beams; a home is built with love and dreams. Protect both with insurance.</p>
+                     </div>
                     </div>
                 </div>
             </div>
