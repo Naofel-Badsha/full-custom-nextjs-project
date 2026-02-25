@@ -1,8 +1,8 @@
+import Link from "next/link";
 import React from "react";
-import  { FaCarCrash, FaToolbox, FaUsers } from "react-icons/fa";
-import  { IoHome } from "react-icons/io5";
+import { FaCarCrash, FaToolbox, FaUsers } from "react-icons/fa";
+import { IoHome } from "react-icons/io5";
 import { MdOutlineFamilyRestroom, MdTravelExplore } from "react-icons/md";
-
 
 interface OfferingType {
   id: string;
@@ -10,7 +10,6 @@ interface OfferingType {
   description: string;
   icon: React.ReactNode;
 }
-
 
 const offerings: OfferingType[] = [
   {
@@ -75,12 +74,13 @@ const WhatWereOffering = () => {
             consequat luctus.
           </p>
         </div>
+
         {/*------------Card-----------*/}
-        <div className="">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 mt-10">
           {offerings.map((offering) => (
             <div
               key={offering.id}
-              className="relative w-80 p-8 rounded-xl bg-white border border-gray-100 shadow-sm overflow-hidden font-sans"
+              className="relative w-full p-8 rounded-xl bg-white border border-gray-100 shadow-sm overflow-hidden font-sans"
             >
               <div className="absolute -top-10 -left-10 w-32 h-32 opacity-20">
                 <div className="absolute inset-0 border-[2px] border-green-600 rounded-full scale-[1.0]"></div>
@@ -99,10 +99,8 @@ const WhatWereOffering = () => {
               ></div>
 
               <div className="relative z-10 flex flex-col items-start">
-                <div className="w-20 h-20 bg-[#064e3b] rounded-full flex items-center justify-center border-[6px] border-white shadow-md mb-6">
-                 <span className="text-white">
-                  {offering.icon}
-                 </span>
+                <div className="w-20 h-20 bg-[#064e3b] rounded-full flex items-center justify-center border-[6px] border-[#EEEEEE] shadow-md mb-6">
+                  <span className="text-white text-4xl">{offering.icon}</span>
                 </div>
 
                 <h2 className="text-2xl font-bold text-gray-800 mb-3 leading-tight">
@@ -112,22 +110,13 @@ const WhatWereOffering = () => {
                   {offering.description}
                 </p>
 
-                <button className="bg-[#00a854] hover:bg-[#008f47] text-white font-bold py-4 px-8 rounded-2xl flex items-center transition-colors group">
+                <Link
+                  href="#"
+                  className="inline-flex items-center gap-2 mt-6 bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-3 rounded-full font-semibold transition"
+                >
                   READ MORE
-                  <svg
-                    className="w-5 h-5 ml-2 transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </button>
+                  <span>↗</span>
+                </Link>
               </div>
             </div>
           ))}
@@ -138,4 +127,3 @@ const WhatWereOffering = () => {
 };
 
 export default WhatWereOffering;
-
