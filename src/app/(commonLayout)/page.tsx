@@ -1,7 +1,9 @@
-import React from 'react'
-import Hero from '../components/HomePagesAllSection/HeroSection/Hero'
-import HAboutUsSection from '../components/HomePagesAllSection/HeroSection/HAboutUsSection'
-import WhatWereOffering from '../components/HomePagesAllSection/HeroSection/WhatWereOffering'
+
+import Hero from '../components/HomePagesAllSection/Hero'
+import HAboutUsSection from '../components/HomePagesAllSection/HAboutUsSection'
+import WhatWereOffering from '../components/HomePagesAllSection/WhatWereOffering'
+import SmartInsurance from '../components/HomePagesAllSection/SmartInsurance'
+
 
 const Homepage = () => {
   return (
@@ -9,6 +11,7 @@ const Homepage = () => {
       <Hero />
       <HAboutUsSection />
       <WhatWereOffering />
+      <SmartInsurance />
     </div>
   )
 }
