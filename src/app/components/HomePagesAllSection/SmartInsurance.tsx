@@ -1,6 +1,5 @@
 import { ArrowUpRightIcon, CheckBadgeIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
-import React from "react";
 import { BiDownload } from "react-icons/bi";
 
 const SmartInsurance = () => {
@@ -8,10 +7,10 @@ const SmartInsurance = () => {
     <section className="py-[100px] bg-white">
       <div className="max-w-7xl mx-auto">
         {/*------------Banner-------------*/}
-        <div className="min-h-screen flex items-center justify-center">
+        <div className="flex items-center justify-center">
           {/*---------Main Container with Diamond Pattern/Gradient---------*/}
           <div
-            className="relative w-full  bg-[#006b33] rounded-3xl overflow-hidden flex flex-col lg:flex-row shadow-2xl"
+            className="relative w-full  bg-[#006b33] rounded-3xl overflow-hidden flex flex-col lg:flex-row"
             style={{
               backgroundImage: `radial-gradient(circle at 20% 50%, #008445 0%, #006b33 100%)`,
             }}
