@@ -1,3 +1,4 @@
+import Image from "next/image"
 
 
 const WorkingProcess = () => {
@@ -20,10 +21,22 @@ const WorkingProcess = () => {
                 </div>
 
                 {/*------------------Box----card----------*/}
-                <div className="">
+                <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 mt-16">
                     {/*-------card-----1-------*/}
                     <div className="">
-                        
+                        <div className="bg-[#00863F] p-10 rounded-2xl">
+                            <Image src="/assets/process-1.webp"
+                            alt=""
+                            width={500}
+                            height={500}
+                            className="w-full h-[250px] object-cover rounded-2xl"
+                            ></Image>
+                        </div>
+                        <div className="bg-[#00A34D] rounded-full p-3 w-fit">
+                            <span className="bg-[#FFFFFF] p-4 text-4xl text-[#00863F] rounded-full font-semibold">01</span>
+                        </div>
+                        <h3 className="">Choose Insurance</h3>
+                        <p className="">Class commodo quam praesent phasellus ornare. Praesent senectus nullam curabitur torquent duis id. Quam quis consequat amet.</p>
                     </div>
                 </div>
             </div>
