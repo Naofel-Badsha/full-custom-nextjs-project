@@ -17,25 +17,25 @@ const HAboutUsSection = () => {
                 alt="Insurance Team"
                 width={300}
                 height={300}
-                className="object-cover w-full rounded-2xl"
+                className="object-cover w-full rounded-2xl shadow p-3"
               />
               <Image
                 src="/assets/about-2.webp"
                 alt="Insurance Team"
                 width={300}
                 height={300}
-                className="object-cover w-full rounded-2xl"
+                className="object-cover w-full rounded-2xl shadow p-3"
               />
             </div>
             {/*-------Iamges-----Box----2-------*/}
             <div className="space-y-8 flex items-center">
-              <div className="relative">
+              <div className="relative ">
                 <Image
                   src="/assets/about-3.webp"
                   alt="Insurance Team"
                   width={300}
                   height={300}
-                  className="object-cover w-full rounded-2xl "
+                  className="object-cover w-full rounded-2xl  shadow p-3"
                 />
 
                 <div className="absolute top-[250px] w-full">

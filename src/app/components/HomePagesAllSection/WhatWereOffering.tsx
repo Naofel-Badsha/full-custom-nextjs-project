@@ -80,7 +80,7 @@ const WhatWereOffering = () => {
           {offerings.map((offering) => (
             <div
               key={offering.id}
-              className="relative w-full p-8 rounded-xl bg-white border border-gray-100 shadow-sm overflow-hidden font-sans"
+              className="relative w-full p-8 rounded-xl bg-white border border-gray-100 shadow overflow-hidden font-sans"
             >
               <div className="absolute -top-10 -left-10 w-32 h-32 opacity-20">
                 <div className="absolute inset-0 border-[2px] border-green-600 rounded-full scale-[1.0]"></div>

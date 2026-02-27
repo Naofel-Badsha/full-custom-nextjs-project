@@ -87,7 +87,7 @@ const ProfessionalInsurance = () => {
                 alt="Professional Insurance"
                 width={500}
                 height={500}
-                className="w-full h-[450px] object-cover rounded-2xl shadow p-3"
+                className="w-full h-[450px] object-cover rounded-xl shadow p-3"
               ></Image>
             </div>
 
@@ -97,14 +97,14 @@ const ProfessionalInsurance = () => {
                 alt="Professional Insurance"
                 width={500}
                 height={500}
-                className="w-full h-[200px] object-cover rounded-2xl shadow p-3 border"
+                className="w-full h-[200px] object-cover rounded-xl shadow p-3 border"
               ></Image>
               <Image
                 src="/assets/professiona-2.webp"
                 alt="Professional Insurance"
                 width={500}
                 height={500}
-                className="w-full h-[450px] object-cover rounded-2xl shadow p-3"
+                className="w-full h-[450px] object-cover rounded-xl shadow p-3"
               ></Image>
             </div>
           </div>

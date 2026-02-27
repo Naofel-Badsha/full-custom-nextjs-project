@@ -22,7 +22,7 @@ const WorkingProcess = () => {
         {/*------------------Box----card----------*/}
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 mt-12">
           {/*-------card-----1-------*/}
-          <div className="shadow-xl p-5 border-1 border-gray-200 bg-white rounded-2xl group">
+          <div className="shadow p-5 border-gray-200 bg-white rounded-2xl group">
             <div className="bg-[#00863F] pt-7 pl-7 pr-7 pb-17 rounded-2xl">
               <Image
                 src="/assets/process-1.webp"
@@ -48,7 +48,7 @@ const WorkingProcess = () => {
             </p>
           </div>
           {/*-------card-----2-------*/}
-          <div className="shadow-xl p-5 border-1 border-gray-200 bg-white rounded-2xl group">
+          <div className="shadow p-5 border-gray-200 bg-white rounded-2xl group">
             <div className="bg-[#00863F] pt-7 pl-7 pr-7 pb-17 rounded-2xl">
               <Image
                 src="/assets/process-2.webp"
@@ -75,7 +75,7 @@ const WorkingProcess = () => {
             </p>
           </div>
           {/*-------card-----3-------*/}
-          <div className="shadow-xl p-5 border-1 border-gray-200 bg-white rounded-2xl group">
+          <div className="shadow p-5 border-gray-200 bg-white rounded-2xl group">
             <div className="bg-[#00863F] pt-7 pl-7 pr-7 pb-17 rounded-2xl">
               <Image
                 src="/assets/process-3.webp"
