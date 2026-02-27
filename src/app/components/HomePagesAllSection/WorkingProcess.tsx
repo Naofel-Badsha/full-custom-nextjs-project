@@ -10,7 +10,7 @@ const WorkingProcess = () => {
             Working Process
           </div>
           <h2 className="text-[#1d1d1d] font-semibold text-[42px] capitalize leading-13 text-center mt-5">
-            Highlighting services or <br /> insurance plans.
+            Easy Step of Working Procces.
           </h2>
           <p className="text-[18px] font-light text-[#6d6d6d] text-center w-[600px] m-auto">
             Sagittis mi eros purus commodo himenaeos ac. Primis ligula ligula
@@ -26,7 +26,7 @@ const WorkingProcess = () => {
             <div className="bg-[#00863F] pt-7 pl-7 pr-7 pb-17 rounded-2xl">
               <Image
                 src="/assets/process-1.webp"
-                alt=""
+                alt="WorkProsses"
                 width={500}
                 height={500}
                 className="w-full h-[250px] object-cover rounded-2xl"
@@ -52,7 +52,7 @@ const WorkingProcess = () => {
             <div className="bg-[#00863F] pt-7 pl-7 pr-7 pb-17 rounded-2xl">
               <Image
                 src="/assets/process-2.webp"
-                alt=""
+                alt="WorkProsses"
                 width={500}
                 height={500}
                 className="w-full h-[250px] object-cover rounded-2xl"
@@ -79,7 +79,7 @@ const WorkingProcess = () => {
             <div className="bg-[#00863F] pt-7 pl-7 pr-7 pb-17 rounded-2xl">
               <Image
                 src="/assets/process-3.webp"
-                alt=""
+                alt="WorkProsses"
                 width={500}
                 height={500}
                 className="w-full h-[250px] object-cover rounded-2xl"

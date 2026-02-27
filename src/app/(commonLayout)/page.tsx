@@ -4,6 +4,7 @@ import HAboutUsSection from '../components/HomePagesAllSection/HAboutUsSection'
 import WhatWereOffering from '../components/HomePagesAllSection/WhatWereOffering'
 import SmartInsurance from '../components/HomePagesAllSection/SmartInsurance'
 import WorkingProcess from '../components/HomePagesAllSection/WorkingProcess'
+import ProfessionalInsurance from '../components/HomePagesAllSection/ProfessionalInsurance'
 
 
 const Homepage = () => {
@@ -14,6 +15,7 @@ const Homepage = () => {
       <WhatWereOffering />
       <SmartInsurance />
       <WorkingProcess />
+      <ProfessionalInsurance />
     </div>
   )
 }
