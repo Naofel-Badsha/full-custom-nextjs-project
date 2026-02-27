@@ -6,9 +6,9 @@ const ProfessionalInsurance = () => {
   return (
     <section className="py-[100px]">
       <div className="max-w-7xl mx-auto">
-        <div className="flex gap-10">
+        <div className="flex items-center justify-center gap-10">
           {/*------------Content-----------*/}
-          <div className="">
+          <div>
             {/*------------Heading----------*/}
             <div className="space-y-5">
               <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">
@@ -87,7 +87,7 @@ const ProfessionalInsurance = () => {
                 alt="Professional Insurance"
                 width={500}
                 height={500}
-                className="w-full h-[450px] object-cover rounded-2xl"
+                className="w-full h-[450px] object-cover rounded-2xl shadow p-3"
               ></Image>
             </div>
 
@@ -97,14 +97,14 @@ const ProfessionalInsurance = () => {
                 alt="Professional Insurance"
                 width={500}
                 height={500}
-                className="w-full h-[200px] object-cover rounded-2xl"
+                className="w-full h-[200px] object-cover rounded-2xl shadow p-3 border"
               ></Image>
               <Image
                 src="/assets/professiona-2.webp"
                 alt="Professional Insurance"
                 width={500}
                 height={500}
-                className="w-full h-[450px] object-cover rounded-2xl"
+                className="w-full h-[450px] object-cover rounded-2xl shadow p-3"
               ></Image>
             </div>
           </div>
