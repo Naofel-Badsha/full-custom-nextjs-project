@@ -7,6 +7,7 @@ import CaseStudy from '../components/HomePagesAllSection/CaseStudy'
 import WorkingProcess from '../components/HomePagesAllSection/WorkingProcess'
 import ProfessionalInsurance from '../components/HomePagesAllSection/ProfessionalInsurance'
 import TeamMembers from '../components/HomePagesAllSection/TeamMembers'
+import CostCalculate from '../components/HomePagesAllSection/CostCalculate'
 
 
 
@@ -21,6 +22,7 @@ const Homepage = () => {
       <WorkingProcess />
       <ProfessionalInsurance />
       <TeamMembers />
+      <CostCalculate />
     </div>
   )
 }
