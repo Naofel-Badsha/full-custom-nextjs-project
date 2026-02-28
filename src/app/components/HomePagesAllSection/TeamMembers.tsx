@@ -92,7 +92,7 @@ const teams: TeamMember[] = [
 
 const TeamMembers = () => {
   return (
-    <section className="py-[100px] bg-[#EAF3EA]">
+    <section className="py-[100px]">
       <div className="max-w-7xl mx-auto">
         {/*------------Content-----------*/}
         <div className="space-y-5">
@@ -142,7 +142,7 @@ const TeamMembers = () => {
               teams.map((team) => (
                 <SwiperSlide key={team.id}>
                   <div className="mt-6 py-5">
-                    <div className=" rounded-2xl overflow-hidden shadow-lg bg-white">
+                    <div className=" rounded-2xl overflow-hidden shadow bg-white border-[1px] border-gray-100">
                       <div className="relative">
                         <Image
                           src={team.image}
@@ -157,7 +157,7 @@ const TeamMembers = () => {
                             <h3 className="text-white text-xl font-semibold">
                               {team.name}
                             </h3>
-                            <hr className='text-white h-[1px] mt-2 mb-2'/>
+                            <hr className='text-white h-[1px] mt-2 mb-2' />
                             <p className="text-green-200 text-sm">{team.podobi}</p>
                           </div>
 
@@ -167,14 +167,14 @@ const TeamMembers = () => {
                               className=" absolute -top-48 right-0 space-y-2 gap-2 opacity-0 translate-x-6 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
                             >
                               {team.socials.map((social) => (
-                              <Link
-                              key={social.id}
-                                href={social.link}
-                                target="_blank"
-                                className="w-8 h-8 hover:bg-[#00A63E] hover:text-white hover:scale-110 duration-500 bg-white rounded-full flex items-center justify-center text-green-800 text-sm font-bold shadow"
-                              >
-                                {social.icon}
-                              </Link>
+                                <Link
+                                  key={social.id}
+                                  href={social.link}
+                                  target="_blank"
+                                  className="w-8 h-8 hover:bg-[#00A63E] hover:text-white hover:scale-110 duration-500 bg-white rounded-full flex items-center justify-center text-green-800 text-sm font-bold shadow"
+                                >
+                                  {social.icon}
+                                </Link>
                               ))}
                             </div>
 
@@ -192,6 +192,16 @@ const TeamMembers = () => {
             }
           </div>
         </Swiper>
+
+        <div className="flex items-center justify-center">
+          <Link
+            href="our-team"
+            className="inline-flex items-center gap-2 mt-6 bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-3 rounded-full font-semibold uppercase transition "
+          >
+           See all member
+            <span>↗</span>
+          </Link>
+        </div>
       </div>
     </section>
   );
