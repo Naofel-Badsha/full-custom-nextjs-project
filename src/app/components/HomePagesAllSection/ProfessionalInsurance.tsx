@@ -7,9 +7,8 @@ const ProfessionalInsurance = () => {
     <section className="py-[100px] bg-[#EAF3EA]">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center justify-center gap-10">
-          {/*------------Content-----------*/}
           <div>
-            {/*------------Heading----------*/}
+            {/*------------Content-----------*/}
             <div className="space-y-5">
               <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">
                 Professional Insurance
