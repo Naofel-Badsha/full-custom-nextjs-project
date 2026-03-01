@@ -8,6 +8,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import Image from "next/image";
 import React from "react";
 import { FaQuoteLeft, FaStar } from "react-icons/fa";
+import CountUp from "../Recharts/CountUp";
 
 interface starsTypes {
   id: number;
@@ -149,7 +150,7 @@ const Testimonial = () => {
           >
             {testimonials.map((testimonial) => (
               <SwiperSlide key={testimonial.id}>
-                <div className="bg-[#e6f7ee] p-6 rounded-2xl border space-y-5 w-full">
+                <div className="bg-[#e6f7ee] p-6 rounded-2xl shadow space-y-5 w-full">
                   <div className="group-hover:scale-110 duration-500">
                     <div className="bg-[#FFFFFF] p-4 text-4xl text-[#00863F] rounded-full  font-semibold shadow w-fit border">
                       <FaQuoteLeft />
@@ -191,6 +192,9 @@ const Testimonial = () => {
               </SwiperSlide>
             ))}
           </Swiper>
+        </div>
+        <div className="pt-20 mt-10 border-t-[1px] border-gray-400">
+          <CountUp />
         </div>
       </div>
     </section>
