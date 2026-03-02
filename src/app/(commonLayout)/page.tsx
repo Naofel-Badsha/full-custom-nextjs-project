@@ -10,6 +10,7 @@ import TeamMembers from '../components/HomePagesAllSection/TeamMembers'
 import CostCalculate from '../components/HomePagesAllSection/CostCalculate'
 import Testimonial from '../components/HomePagesAllSection/Testimonial'
 import Promo from '../components/HomePagesAllSection/Promo'
+import NewsAndBlog from '../components/HomePagesAllSection/NewsAndBlog'
 
 
 
@@ -27,6 +28,7 @@ const Homepage = () => {
       <CostCalculate />
       <Testimonial />
       <Promo />
+      <NewsAndBlog />
     </div>
   )
 }

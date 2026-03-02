@@ -3,10 +3,10 @@ import React from 'react'
 
 const Promo = () => {
     return (
-        <section className="py-[100px]">
+        <section className="py-[100px] bg-[#f1f7f2]">
             <div className="max-w-7xl mx-auto">
                 <div
-                    className="relative w-full overflow-hidden rounded-2xl bg-cover bg-center px-8 py-10 text-center text-white shadow-2xl"
+                    className="relative w-full overflow-hidden rounded-2xl bg-cover bg-center px-8 py-15 text-center text-white shadow-xl"
                     style={{
                         backgroundImage: `linear-gradient(rgba(0, 77, 38, 0.85), rgba(0, 77, 38, 0.85)), url('https://img.freepik.com/premium-vector/modern-gradient-minimalist-background-design_336924-7142.jpg')`
                     }}
