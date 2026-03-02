@@ -193,7 +193,7 @@ const Testimonial = () => {
             ))}
           </Swiper>
         </div>
-        <div className="pt-20 mt-10 border-t-[1px] border-gray-400">
+        <div className="pt-20 mt-15 border-t-[1px] border-gray-200">
           <CountUp />
         </div>
       </div>
