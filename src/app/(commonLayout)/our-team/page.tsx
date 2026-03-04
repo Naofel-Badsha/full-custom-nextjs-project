@@ -1,8 +1,11 @@
+import TeamBanner from '@/app/components/OurTeamAllSection/TeamBanner'
 import React from 'react'
 
 const OurTeamPage = () => {
   return (
-    <div>OurTeamPage</div>
+    <div className=''>
+      <TeamBanner />
+    </div>
   )
 }
 
