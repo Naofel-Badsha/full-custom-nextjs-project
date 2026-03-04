@@ -235,7 +235,7 @@ const AllTeamMenber = () => {
   return (
     <section>
       <div className="">
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
           {teams.map((team) => (
             <div key={team.id} className="mt-6 py-5">
               <div className=" rounded-2xl overflow-hidden shadow bg-white border-[1px] border-gray-100">

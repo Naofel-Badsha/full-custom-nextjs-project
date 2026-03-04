@@ -94,21 +94,21 @@ const AboutUs = () => {
                 <div className="flex items-center gap-10 border-b-1 border-gray-300 pb-8">
                   {/*-------------1---------*/}
                   <div className="flex items-center gap-1">
-                    <FaWpforms className="bg-[#2A2A2A] p-2 text-4xl rounded-full text-[#00A04C]" />
+                    <FaWpforms className="bg-[#00A04C] p-2 text-[40px] rounded-full text-[#fff] animate-pulse" />
                     <p className="text-[#1d1d1d] text-[18px] font-medium">
                       Claim Form
                     </p>
                   </div>
                   {/*-------------2---------*/}
                   <div className="flex items-center gap-1">
-                    <FaMoneyBill className="bg-[#2A2A2A] p-2 text-4xl rounded-full text-[#00A04C]" />
+                    <FaMoneyBill className="bg-[#00A04C] p-2 text-[40px] rounded-full text-[#fff] animate-pulse" />
                     <p className="text-[#1d1d1d] text-[18px] font-medium">
                       E - Brochure
                     </p>
                   </div>
                   {/*-------------3---------*/}
                   <div className="flex items-center gap-1">
-                    <PiHandHeartFill className="bg-[#2A2A2A] p-2 text-4xl rounded-full text-[#00A04C]" />
+                    <PiHandHeartFill className="bg-[#00A04C] p-2 text-[40px] rounded-full text-[#fff] animate-pulse" />
                     <p className="text-[#1d1d1d] text-[18px] font-medium">
                       24/7 Client Support
                     </p>
