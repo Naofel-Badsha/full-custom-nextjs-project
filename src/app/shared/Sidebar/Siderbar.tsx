@@ -1,6 +1,10 @@
-import React from 'react'
+'use client'
+import  { useState } from 'react'
 
 const Siderbar = () => {
+  const [open, setOpen] = useState(true);
+
+  
   return (
     <div className="w-64 bg-gray-900 text-white p-4 min-h-screen">Sider bar</div>
   )
