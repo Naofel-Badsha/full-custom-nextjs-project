@@ -1,5 +1,5 @@
-'use client'
-import React from 'react'
+"use client";
+import React from "react";
 
 type Props = {
   open: boolean;
@@ -9,16 +9,19 @@ type Props = {
 const DashboardHeader = ({ open, setOpen }: Props) => {
   return (
     <div className="h-16 bg-gray-300 flex items-center px-6 shadow">
+
       {/* Toggle Button */}
       <button
         onClick={() => setOpen(!open)}
-        className="text-2xl mr-4 cursor-pointer"
+        className="text-2xl mr-4 cursor-pointer md:hidden"
       >
         ☰
       </button>
-      <h1>Dashboard Header</h1>
-      </div>
-  )
-}
 
-export default DashboardHeader
+      <h1>Dashboard Header</h1>
+
+    </div>
+  );
+};
+
+export default DashboardHeader;
