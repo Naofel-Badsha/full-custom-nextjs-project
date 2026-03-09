@@ -5,14 +5,16 @@ import React, { useState } from "react";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
   const [open, setOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
     <div className="flex h-screen relative">
 
       {/*--------Overlay------(mobile)----------*/}
-      {open && (
+      {/* Overlay (mobile) */}
+      {mobileOpen && (
         <div
-          onClick={() => setOpen(false)}
+          onClick={() => setMobileOpen(false)}
           className="fixed inset-0 bg-black/40 backdrop-blur-sm md:hidden z-40"
         />
       )}
@@ -24,13 +26,14 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
         z-50
         h-full
         bg-slate-900 text-white
-        transition-transform duration-300
+        transition-all duration-300
         w-64
-        ${open ? "translate-x-0" : "-translate-x-full"}
+        ${mobileOpen ? "translate-x-0" : "-translate-x-full"}
         md:translate-x-0
+        ${open ? "md:w-64" : "md:w-0 md:overflow-hidden"}
       `}
       >
-        <Siderbar />
+        <Siderbar setMobileOpen={setMobileOpen}/>
       </div>
 
 
@@ -38,7 +41,12 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 
       {/*----------Right-----Side------------*/}
       <div className="flex flex-col flex-1">
-        <DashboardHeader open={open} setOpen={setOpen} />
+        <DashboardHeader 
+          open={open}
+          setOpen={setOpen}
+          mobileOpen={mobileOpen}
+          setMobileOpen={setMobileOpen}
+        />
         <main className="flex-1 p-6 overflow-y-auto bg-amber-400">
           {children}
         </main>

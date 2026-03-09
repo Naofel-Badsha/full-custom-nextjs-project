@@ -3,8 +3,10 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-
-const Siderbar = () => {
+type Props = {
+  setMobileOpen: (value: boolean) => void;
+};
+const Siderbar = ({setMobileOpen }: Props) => {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState(false);
   const menu = [
@@ -25,6 +27,7 @@ const Siderbar = () => {
           <li key={item.path}>
             <Link
               href={item.path}
+              onClick={() => setMobileOpen(false)}
               className={`block px-4 py-2 rounded-md transition ${
                 pathname === item.path ? "bg-blue-600" : "hover:bg-gray-700"
               }`}
@@ -40,7 +43,12 @@ const Siderbar = () => {
             onClick={() => setOpenMenu(!openMenu)}
             className="w-full text-left px-4 py-2 hover:bg-gray-700 rounded"
           >
-            <div className="flex items-center justify-between">All Dropdown <span className="border-[1px] p-2 w-[20px] h-[20px] flex items-center justify-center rounded-full cursor-pointer ">v</span></div>
+            <div className="flex items-center justify-between">
+              All Dropdown{" "}
+              <span className="border-[1px] p-2 w-[20px] h-[20px] flex items-center justify-center rounded-full cursor-pointer ">
+                v
+              </span>
+            </div>
           </button>
 
           {openMenu && (
@@ -48,6 +56,7 @@ const Siderbar = () => {
               <li>
                 <Link
                   href="/dashboard/reports/sales"
+                  onClick={() => setMobileOpen(false)}
                   className="block px-4 py-2 hover:bg-gray-700 rounded"
                 >
                   Sales
@@ -57,9 +66,20 @@ const Siderbar = () => {
               <li>
                 <Link
                   href="/dashboard/reports/analytics"
+                  onClick={() => setMobileOpen(false)}
                   className="block px-4 py-2 hover:bg-gray-700 rounded"
                 >
                   Analytics
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href="/dashboard/reports/customers"
+                  onClick={() => setMobileOpen(false)}
+                  className="block px-4 py-2 hover:bg-gray-700 rounded"
+                >
+                Customers
                 </Link>
               </li>
             </ul>
