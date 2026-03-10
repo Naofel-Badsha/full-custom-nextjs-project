@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -23,6 +24,9 @@ const Siderbar = ({setMobileOpen }: Props) => {
 
   return (
     <div className="w-64 bg-gray-900 text-white p-4 min-h-screen">
+      <div className="pt-2 pb-4">
+          <h1 className="text-2xl font-bold">ZANCE</h1>
+      </div>
       <ul className="space-y-2">
         {menu.map((item) => (
           <li key={item.path}>

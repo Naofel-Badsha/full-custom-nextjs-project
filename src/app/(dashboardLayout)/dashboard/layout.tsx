@@ -37,7 +37,17 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
 
       {/*----------Sidebar-------------*/}
       <div
-        className={` fixed md:static z-50 h-full bg-slate-900 text-white transition-all duration-300 w-64 ${mobileOpen ? "translate-x-0" : "-translate-x-full"} md:ranslate-x-0 ${open ? "md:w-64" : "md:w-0 md:overflow-hidden"}`}
+        className={`
+         fixed md:static
+         z-50
+         h-full
+       bg-slate-900 text-white
+        transition-all duration-300
+        w-64
+       ${mobileOpen ? "translate-x-0" : "-translate-x-full"}
+        md:translate-x-0
+        ${open ? "md:w-64" : "md:w-0 md:overflow-hidden"}
+       `}
       >
         <Siderbar setMobileOpen={setMobileOpen} />
       </div>
@@ -50,7 +60,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
           mobileOpen={mobileOpen}
           setMobileOpen={setMobileOpen}
         />
-        <main className="flex-1 p-6 overflow-y-auto bg-amber-400">
+        <main className="flex-1 p-6 overflow-y-auto bg-white">
           {children}
         </main>
       </div>

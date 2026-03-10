@@ -25,7 +25,7 @@ const DashboardHeader = ({
   //--------user------Profile---------
   const [profileOpen, setProfileOpen] = useState(false);
   return (
-    <div className="h-16 bg-gray-300 flex items-center px-6 shadow">
+    <aside className="h-16 bg-white flex items-center px-6 shadow-md z-50 sticky top-0 left-0 right-0">
       {/*--------Toggle-------Button-------*/}
       <button onClick={toggleSidebar} className="text-2xl mr-4 cursor-pointer">
         ☰
@@ -52,7 +52,7 @@ const DashboardHeader = ({
           </div>
         )}
       </div>
-    </div>
+    </aside>
   );
 };
 
