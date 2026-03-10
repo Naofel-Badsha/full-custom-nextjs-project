@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { IoMdNotificationsOutline } from "react-icons/io";
-
+//-----------Props Dealing by DashboardLayout--------- 
 type Props = {
   open: boolean;
   setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -28,8 +28,39 @@ const DashboardHeader = ({
 
   //--------User------Profile---------
   const [profileOpen, setProfileOpen] = useState(false);
+  const profileRef = useRef<HTMLDivElement>(null);
+
   //--------Notification----------
   const [notificationOpen, setNotificationOpen] = useState(false);
+  const notificationRef = useRef<HTMLDivElement>(null);
+//---------Device er ja kono gaygate click korlea jano notificaton and 
+//---------profile er popup jano close hoyea jay sey jonno aykhnea useEffect User korea hoysea 
+useEffect(() => {
+  const handleClickOutside = (event: MouseEvent) => {
+    if (
+      profileRef.current &&
+      !profileRef.current.contains(event.target as Node)
+    ) {
+      setProfileOpen(false);
+    }
+
+    if (
+      notificationRef.current &&
+      !notificationRef.current.contains(event.target as Node)
+    ) {
+      setNotificationOpen(false);
+    }
+
+  };
+
+  document.addEventListener("mousedown", handleClickOutside);
+
+  return () => {
+    document.removeEventListener("mousedown", handleClickOutside);
+  };
+}, []);
+
+
 
   return (
     <aside className="h-16 bg-white flex items-center justify-between px-6 shadow-md z-50 sticky top-0 left-0 right-0">
@@ -40,7 +71,7 @@ const DashboardHeader = ({
 
       <div className="flex items-center gap-5">
         {/*---------Notification----------*/}
-        <div className="relative">
+        <div className="relative" ref={notificationRef}>
           <div
             className="flex cursor-pointer"
             onClick={() => setNotificationOpen(!notificationOpen)}
@@ -53,16 +84,36 @@ const DashboardHeader = ({
           {notificationOpen && (
             <div className="absolute right-0 mt-4.5 w-40 bg-white rounded-xl shadow-md -mr-9">
               <div className=" text-black">
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Html</a>
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Css</a>
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">JavaScript</a>
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">React Js</a>
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Next Js</a>
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">TypeScript</a>
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Redux Toolkit</a>
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Node Js</a>
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Express js</a>
-                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">MongoBD</a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Html
+                </a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Css
+                </a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  JavaScript
+                </a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  React Js
+                </a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Next Js
+                </a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  TypeScript
+                </a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Redux Toolkit
+                </a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Node Js
+                </a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  Express js
+                </a>
+                <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                  MongoBD
+                </a>
               </div>
             </div>
           )}
@@ -70,7 +121,7 @@ const DashboardHeader = ({
         </div>
 
         {/*---------Profile----------*/}
-        <div className="relative">
+        <div className="relative" ref={profileRef}>
           <Link href="">
             <Image
               onClick={() => setProfileOpen(!profileOpen)}
@@ -84,9 +135,15 @@ const DashboardHeader = ({
 
           {profileOpen && (
             <div className="absolute right-0 mt-2 w-40 bg-white shadow rounded text-black">
-              <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">My Profile</a>
-              <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Settings</a>
-              <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Logout</a>
+              <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                My Profile
+              </a>
+              <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                Settings
+              </a>
+              <a className="block px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                Logout
+              </a>
             </div>
           )}
         </div>
