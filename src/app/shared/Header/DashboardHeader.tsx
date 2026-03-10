@@ -30,38 +30,28 @@ const DashboardHeader = ({
       <button onClick={toggleSidebar} className="text-2xl mr-4 cursor-pointer">
         ☰
       </button>
-      
-       <h1>Dashboard Header</h1>
 
-               {/* Profile */}
-        <div className="relative">
+      <h1>Dashboard Header</h1>
 
-          <button
-            onClick={() => setProfileOpen(!profileOpen)}
-            className="bg-gray-500 text-white px-3 py-1 rounded"
-          >
-            Profile
-          </button>
+      {/* Profile */}
+      <div className="relative">
+        <button
+          onClick={() => setProfileOpen(!profileOpen)}
+          className="bg-gray-500 text-white px-3 py-1 rounded"
+        >
+          Profile
+        </button>
 
-          {profileOpen && (
-            <div className="absolute right-0 mt-2 w-40 bg-white shadow rounded text-black">
+        {profileOpen && (
+          <div className="absolute right-0 mt-2 w-40 bg-white shadow rounded text-black">
+            <a className="block px-4 py-2 hover:bg-gray-100">My Profile</a>
 
-              <a className="block px-4 py-2 hover:bg-gray-100">
-                My Profile
-              </a>
+            <a className="block px-4 py-2 hover:bg-gray-100">Settings</a>
 
-              <a className="block px-4 py-2 hover:bg-gray-100">
-                Settings
-              </a>
-
-              <a className="block px-4 py-2 hover:bg-gray-100">
-                Logout
-              </a>
-
-            </div>
-          )}
-
-        </div>
+            <a className="block px-4 py-2 hover:bg-gray-100">Logout</a>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

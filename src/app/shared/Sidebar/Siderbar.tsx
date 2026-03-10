@@ -9,6 +9,7 @@ type Props = {
 const Siderbar = ({setMobileOpen }: Props) => {
   const pathname = usePathname();
   const [openMenu, setOpenMenu] = useState(false);
+  
   const menu = [
     { name: "Dashboard", path: "/dashboard" },
     { name: "Agents", path: "/dashboard/agents" },
