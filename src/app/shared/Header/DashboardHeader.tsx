@@ -1,5 +1,9 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
+import { FaBars, } from "react-icons/fa";
+import { IoMdNotificationsOutline } from "react-icons/io";
 
 type Props = {
   open: boolean;
@@ -24,33 +28,44 @@ const DashboardHeader = ({
 
   //--------user------Profile---------
   const [profileOpen, setProfileOpen] = useState(false);
+
   return (
-    <aside className="h-16 bg-white flex items-center px-6 shadow-md z-50 sticky top-0 left-0 right-0">
+    <aside className="h-16 bg-white flex items-center justify-between px-6 shadow-md z-50 sticky top-0 left-0 right-0">
       {/*--------Toggle-------Button-------*/}
       <button onClick={toggleSidebar} className="text-2xl mr-4 cursor-pointer">
-        ☰
+        <FaBars className="text-[#008F45]"></FaBars>
       </button>
 
-      <h1>Dashboard Header</h1>
+      <div className="flex items-center gap-2.5">
+        {/*---------Notification----------*/}
+        <div className="flex">
+          <IoMdNotificationsOutline className="text-3xl"/>
+          <span className="bg-red-500 p-1.5 w-[20px] h-[20px] rounded-full m-auto flex items-center justify-center text-md text-white absolute ml-4">9</span>
+        </div>
+        
+        {/*---------Profile----------*/}
+        <div className="relative">
+          <Link href="">
+            <Image
+              onClick={() => setProfileOpen(!profileOpen)}
+              src="/assets/userProfile.webp"
+              alt=""
+              width={40}
+              height={40}
+              className="object-cover w-auto rounded-full"
+            ></Image>
+          </Link>
 
-      {/* Profile */}
-      <div className="relative">
-        <button
-          onClick={() => setProfileOpen(!profileOpen)}
-          className="bg-gray-500 text-white px-3 py-1 rounded"
-        >
-          Profile
-        </button>
+          {profileOpen && (
+            <div className="absolute right-0 mt-2 w-40 bg-white shadow rounded text-black">
+              <a className="block px-4 py-2 hover:bg-gray-100">My Profile</a>
 
-        {profileOpen && (
-          <div className="absolute right-0 mt-2 w-40 bg-white shadow rounded text-black">
-            <a className="block px-4 py-2 hover:bg-gray-100">My Profile</a>
+              <a className="block px-4 py-2 hover:bg-gray-100">Settings</a>
 
-            <a className="block px-4 py-2 hover:bg-gray-100">Settings</a>
-
-            <a className="block px-4 py-2 hover:bg-gray-100">Logout</a>
-          </div>
-        )}
+              <a className="block px-4 py-2 hover:bg-gray-100">Logout</a>
+            </div>
+          )}
+        </div>
       </div>
     </aside>
   );
