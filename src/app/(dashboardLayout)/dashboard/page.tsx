@@ -1,8 +1,11 @@
-import React from 'react'
+import Incress from '@/app/components/DashboardCompo/AllBox/Incress'
+
 
 const DashboardPage = () => {
   return (
-    <div>Dashboard Page</div>
+    <div>
+      <Incress />
+    </div>
   )
 }
 
