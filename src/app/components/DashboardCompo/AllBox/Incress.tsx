@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { FaGift } from "react-icons/fa";
+import { FaGift, FaUsers } from "react-icons/fa";
+import { IoHome } from "react-icons/io5";
+import { SiRclone } from "react-icons/si";
 
 const Incress = () => {
   return (
@@ -26,7 +28,7 @@ const Incress = () => {
         </div>
 
         <div className="flex items-center gap-2.5 mt-5">
-          <p className="text-[15px] text-green-600">+32.40%</p>
+          <p className="text-[15px] text-[#3B82F6]">+32.40%</p>
           <p className="text-[15px] text-gray-800">Increased last month</p>
         </div>
       </div>
@@ -34,10 +36,10 @@ const Incress = () => {
       <div className="p-4 border-[1px] border-gray-200 bg-[#fff] rounded-xl shadow-md">
         <div className="flex gap-3 items-center justify-between">
           <div className="flex gap-3 items-center">
-            <FaGift className="text-4xl text-[#3B82F6]" />
+            <SiRclone className="text-4xl text-[#10B981]" />
             <div className="">
-              <p className="text-[16px] font-normal text-black">New Orders</p>
-              <h3 className="text-black text-xl font-semibold">1,390</h3>
+              <p className="text-[16px] font-normal text-black">Total Lone</p>
+              <h3 className="text-black text-xl font-semibold">$57,890</h3>
             </div>
           </div>
           <div className="">
@@ -52,18 +54,18 @@ const Incress = () => {
         </div>
 
         <div className="flex items-center gap-2.5 mt-5">
-          <p className="text-[15px] text-green-600">+32.40%</p>
-          <p className="text-[15px] text-gray-800">Increased last month</p>
+          <p className="text-[15px] text-[#10B981]">+32.40%</p>
+          <p className="text-[15px] text-gray-800">Decrease last month</p>
         </div>
       </div>
       {/*-------Box-----3----*/}
       <div className="p-4 border-[1px] border-gray-200 bg-[#fff] rounded-xl shadow-md">
         <div className="flex gap-3 items-center justify-between">
           <div className="flex gap-3 items-center">
-            <FaGift className="text-4xl text-[#3B82F6]" />
+            <IoHome className="text-4xl text-orange-500" />
             <div className="">
-              <p className="text-[16px] font-normal text-black">New Orders</p>
-              <h3 className="text-black text-xl font-semibold">1,390</h3>
+              <p className="text-[16px] font-normal text-black">Revenue</p>
+              <h3 className="text-black text-xl font-semibold">$12,390</h3>
             </div>
           </div>
           <div className="">
@@ -78,7 +80,7 @@ const Incress = () => {
         </div>
 
         <div className="flex items-center gap-2.5 mt-5">
-          <p className="text-[15px] text-green-600">+32.40%</p>
+          <p className="text-[15px] text-orange-500">+32.40%</p>
           <p className="text-[15px] text-gray-800">Increased last month</p>
         </div>
       </div>
@@ -86,10 +88,10 @@ const Incress = () => {
       <div className="p-4 border-[1px] border-gray-200 bg-[#fff] rounded-xl shadow-md">
         <div className="flex gap-3 items-center justify-between">
           <div className="flex gap-3 items-center">
-            <FaGift className="text-4xl text-[#3B82F6]" />
+            <FaUsers className="text-4xl text-sky-400" />
             <div className="">
-              <p className="text-[16px] font-normal text-black">New Orders</p>
-              <h3 className="text-black text-xl font-semibold">1,390</h3>
+              <p className="text-[16px] font-normal text-black">Total Users</p>
+              <h3 className="text-black text-xl font-semibold">1,590</h3>
             </div>
           </div>
           <div className="">
@@ -104,7 +106,7 @@ const Incress = () => {
         </div>
 
         <div className="flex items-center gap-2.5 mt-5">
-          <p className="text-[15px] text-green-600">+32.40%</p>
+          <p className="text-[15px] text-sky-400">+32.40%</p>
           <p className="text-[15px] text-gray-800">Increased last month</p>
         </div>
       </div>
