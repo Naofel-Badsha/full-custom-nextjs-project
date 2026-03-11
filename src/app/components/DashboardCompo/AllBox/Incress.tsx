@@ -5,7 +5,7 @@ import { SiRclone } from "react-icons/si";
 
 const Incress = () => {
   return (
-    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+    <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4 mt-6">
       {/*-------Box-----1----*/}
       <div className="p-4 border-[1px] border-gray-200 bg-[#fff] rounded-xl shadow-md">
         <div className="flex gap-3 items-center justify-between">
