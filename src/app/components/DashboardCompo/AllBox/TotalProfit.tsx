@@ -70,7 +70,6 @@ const TotalProfit = () => {
         <AreaChart
           style={{
             width: "100%",
-            // maxWidth: "700px",
             maxHeight: "70vh",
             aspectRatio: 1.618,
           }}

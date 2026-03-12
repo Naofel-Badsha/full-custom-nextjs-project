@@ -63,7 +63,7 @@ const TasksOverview = () => {
         <PieChart
           style={{
             width: "100%",
-            maxHeight: "80vh",
+            height: "80vh",
             aspectRatio: 1,
           }}
           responsive
