@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
 const TotalProfit = () => {
   return (
-    <div>TotalProfit</div>
-  )
-}
+<div className=""></div>
+  );
+};
 
-export default TotalProfit
+export default TotalProfit;
