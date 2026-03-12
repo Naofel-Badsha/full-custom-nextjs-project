@@ -8,7 +8,7 @@ const Wellcome = () => {
         <h1 className="text-3xl font-semibold">Hello Badsha</h1>
         <p className="text-[16px] font-normal text-gray-800 mt-3">
           Welcome to your Insurance Dashboard. Manage policies, track claims,
-          monitor payments, and view customer insights efficiently in one
+          monitor payments, <br /> and view customer insights efficiently in one
           secure, centralized place.
         </p>
       </div>

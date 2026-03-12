@@ -293,6 +293,12 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
+          <Link
+            href="/dashboard"
+            className="text-sm/6 font-semibold text-gray-900"
+          >
+            Dashboard
+          </Link>
         </PopoverGroup>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
@@ -414,6 +420,12 @@ const Navbar = () => {
                   className="text-sm/6 font-semibold text-gray-900"
                 >
                   Contact Us
+                </Link>
+                <Link
+                  href="/dashboard"
+                  className="text-sm/6 font-semibold text-gray-900"
+                >
+                  Dashboard
                 </Link>
               </div>
               <div className="py-6">
