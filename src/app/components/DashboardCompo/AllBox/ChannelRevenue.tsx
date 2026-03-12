@@ -2,7 +2,7 @@ import React from 'react'
 
 const ChannelRevenue = () => {
   return (
-    <div className='bg-white p-4 rounded-xl shadow-md mt-6 border-[1px] border-gray-200'>
+    <div className='col-span-1 bg-white p-4 rounded-xl shadow-md mt-6 border-[1px] border-gray-200'>
       <div className="flex items-center justify-between gap-4">
         <h2 className="text-[20px] text-black font-bold">Channel Revenue</h2>
         <button className='text-[14px] font-normal px-3 py-1.5 border-[1px] rounded-[5px]  border-gray-400 hover:border-gray-800'>Monthly</button>
