@@ -2,6 +2,7 @@ import Wellcome from '@/app/components/DashboardCompo/AllBox/Wellcome'
 import Incress from '@/app/components/DashboardCompo/AllBox/Incress'
 import ChannelRevenue from '@/app/components/DashboardCompo/AllBox/ChannelRevenue'
 import TotalProfit from '@/app/components/DashboardCompo/AllBox/TotalProfit'
+import SalesReport from '@/app/components/DashboardCompo/AllBox/SalesReport'
 
 const DashboardPage = () => {
   return (
@@ -12,6 +13,7 @@ const DashboardPage = () => {
         <TotalProfit />
         <ChannelRevenue />
       </div>
+      <SalesReport />
     </div>
   )
 }
