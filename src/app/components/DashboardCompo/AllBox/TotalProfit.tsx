@@ -55,7 +55,7 @@ const data = [
 
 const TotalProfit = () => {
   return (
-    <div className="col-span-1 bg-white p-5 rounded-xl shadow-md mt-6 border-[1px] border-gray-200 ">
+    <div className="col-span-1 bg-white p-5 rounded-xl shadow-md mt-6 border-[1px] border-gray-200">
       <div className="flex items-center justify-between">
         <div className="">
           <p className="text-[16px] font-normal text-gray-800">Total Profit</p>
