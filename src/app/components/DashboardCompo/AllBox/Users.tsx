@@ -1,7 +1,7 @@
 "use client";
-import { FaSearch } from "react-icons/fa";
+import { FaEye, FaSearch } from "react-icons/fa";
 import { LiaFilterSolid } from "react-icons/lia";
-import { MdAdd } from "react-icons/md";
+import { MdAdd, MdDelete, MdEdit } from "react-icons/md";
 import { PiExport } from "react-icons/pi";
 
 import { useEffect, useState } from "react";
@@ -63,37 +63,35 @@ const Users = () => {
 
       <div className="mt-10">
         {/*---------Table--------*/}
-        <table className="w-full border border-gray-200">
+        <table className="w-full border-gray-200">
           <thead className="bg-gray-100">
-            <tr>
-              <th className="p-2 border">Name</th>
-              <th className="p-2 border">Email</th>
-              <th className="p-2 border">Phone</th>
-              <th className="p-2 border">Action</th>
+            <tr className="border-[1px] border-gray-100">
+              <th className="p-2 ">Name</th>
+              <th className="p-2 ">Email</th>
+              <th className="p-2 ">Phone</th>
+              <th className="p-2 ">Action</th>
             </tr>
           </thead>
 
           <tbody>
             {currentUsers.map((user) => (
-              <tr key={user.id} className="text-center">
-                <td className="p-2 border">{user.name}</td>
-                <td className="p-2 border">{user.email}</td>
-                <td className="p-2 border">{user.phone}</td>
+              <tr key={user.id} className="text-center border-[1px] border-gray-100">
+                <td className="p-3">{user.name}</td>
+                <td className="p-3">{user.email}</td>
+                <td className="p-3">{user.phone}</td>
 
-                <td className="p-2 border space-x-2">
+                <td className="p-3 space-x-2">
                   <button
-                    className="bg-blue-500 text-white px-3 py-1 rounded"
+                    className="bg-blue-500 text-white px-2 py-1 rounded cursor-pointer"
                     onClick={() => setSelectedUser(user)}
                   >
-                    View
+                   <FaEye />
                   </button>
-
                   <button className="bg-yellow-500 text-white px-3 py-1 rounded">
-                    Edit
+                    <MdEdit />
                   </button>
-
                   <button className="bg-red-500 text-white px-3 py-1 rounded">
-                    Delete
+                    <MdDelete />
                   </button>
                 </td>
               </tr>
@@ -101,8 +99,7 @@ const Users = () => {
           </tbody>
         </table>
 
-        {/* Pagination */}
-
+        {/*----------Pagination-----------*/}
         <div className="flex gap-2 mt-4">
           {Array.from({ length: totalPages }, (_, i) => (
             <button
