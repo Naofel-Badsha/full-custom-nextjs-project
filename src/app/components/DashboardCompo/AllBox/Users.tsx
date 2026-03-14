@@ -1,4 +1,34 @@
 "use client";
+type Geo = {
+  lat: string
+  lng: string
+}
+
+type Address = {
+  street: string
+  suite: string
+  city: string
+  zipcode: string
+  geo: Geo
+}
+
+type Company = {
+  name: string
+  catchPhrase: string
+  bs: string
+}
+
+type User = {
+  id: number
+  name: string
+  username: string
+  email: string
+  address: Address
+  phone: string
+  website: string
+  company: Company
+}
+
 import { FaEye, FaSearch } from "react-icons/fa";
 import { LiaFilterSolid } from "react-icons/lia";
 import { MdAdd, MdDelete, MdEdit } from "react-icons/md";
@@ -7,11 +37,11 @@ import { PiExport } from "react-icons/pi";
 import { useEffect, useState } from "react";
 
 const Users = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState<User[]>([]);
   const [search, setSearch] = useState("");
-  const [selectedUser, setSelectedUser] = useState(null);
+  const [selectedUser, setSelectedUser] = useState<User | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const usersPerPage = 5;
+  const usersPerPage = 4;
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
@@ -66,26 +96,29 @@ const Users = () => {
         <table className="w-full border-gray-200">
           <thead className="bg-gray-100">
             <tr className="border-[1px] border-gray-100">
-              <th className="p-2 ">Name</th>
-              <th className="p-2 ">Email</th>
-              <th className="p-2 ">Phone</th>
-              <th className="p-2 ">Action</th>
+              <th className="p-4">Name</th>
+              <th className="p-4">Email</th>
+              <th className="p-4">Phone</th>
+              <th className="p-4">Action</th>
             </tr>
           </thead>
 
           <tbody>
             {currentUsers.map((user) => (
-              <tr key={user.id} className="text-center border-[1px] border-gray-100">
-                <td className="p-3">{user.name}</td>
-                <td className="p-3">{user.email}</td>
-                <td className="p-3">{user.phone}</td>
+              <tr
+                key={user.id}
+                className="text-center border-[1px] border-gray-100"
+              >
+                <td className="p-4">{user.name}</td>
+                <td className="p-4">{user.email}</td>
+                <td className="p-4">{user.phone}</td>
 
-                <td className="p-3 space-x-2">
+                <td className="p-4 space-x-2">
                   <button
                     className="bg-blue-500 text-white px-2 py-1 rounded cursor-pointer"
                     onClick={() => setSelectedUser(user)}
                   >
-                   <FaEye />
+                    <FaEye />
                   </button>
                   <button className="bg-yellow-500 text-white px-3 py-1 rounded">
                     <MdEdit />
@@ -104,7 +137,7 @@ const Users = () => {
           {Array.from({ length: totalPages }, (_, i) => (
             <button
               key={i}
-              className={`px-3 py-1 border ${
+              className={`px-3 py-1 border rounded-full cursor-pointer ${
                 currentPage === i + 1 ? "bg-blue-500 text-white" : ""
               }`}
               onClick={() => setCurrentPage(i + 1)}
@@ -114,13 +147,11 @@ const Users = () => {
           ))}
         </div>
 
-        {/* View Modal */}
-
+        {/*----------View--------Modal-----------*/}
         {selectedUser && (
           <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40">
             <div className="bg-white p-6 rounded w-96">
               <h2 className="text-xl font-bold mb-4">User Details</h2>
-
               <p>
                 <strong>Name:</strong> {selectedUser.name}
               </p>
@@ -134,6 +165,29 @@ const Users = () => {
                 <strong>Website:</strong> {selectedUser.website}
               </p>
 
+              <h3 className="font-semibold mt-3">Address</h3>
+
+              <p>
+                <strong>Street:</strong> {selectedUser.address.street}
+              </p>
+              <p>
+                <strong>Suite:</strong> {selectedUser.address.suite}
+              </p>
+              <p>
+                <strong>City:</strong> {selectedUser.address.city}
+              </p>
+              <p>
+                <strong>Zipcode:</strong> {selectedUser.address.zipcode}
+              </p>
+
+              <h3 className="font-semibold mt-3">Location</h3>
+
+              <p>
+                <strong>Latitude:</strong> {selectedUser.address.geo.lat}
+              </p>
+              <p>
+                <strong>Longitude:</strong> {selectedUser.address.geo.lng}
+              </p>
               <button
                 className="mt-4 bg-gray-700 text-white px-4 py-2 rounded"
                 onClick={() => setSelectedUser(null)}
