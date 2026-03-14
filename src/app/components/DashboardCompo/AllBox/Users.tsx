@@ -19,10 +19,11 @@ const Users = () => {
       .then((data) => setUsers(data));
   }, []);
 
-  //--------search-------filter-------
-  const filteredUsers = users.filter((user) =>
-  user.name?.toLowerCase().includes(search.toLowerCase()) ||
-  user.email?.toLowerCase().includes(search.toLowerCase())
+  //--------Search-------Filter-------
+  const filteredUsers = users.filter(
+    (user) =>
+      user.name?.toLowerCase().includes(search.toLowerCase()) ||
+      user.email?.toLowerCase().includes(search.toLowerCase()),
   );
 
   //---------pagination----------
@@ -31,6 +32,7 @@ const Users = () => {
   const currentUsers = filteredUsers.slice(indexOfFirst, indexOfLast);
 
   const totalPages = Math.ceil(filteredUsers.length / usersPerPage);
+
   return (
     <div className="bg-white p-5 rounded-xl shadow-md mt-6 border-[1px] border-gray-200">
       <div className="flex items-center justify-between gap-5">
@@ -46,30 +48,21 @@ const Users = () => {
       </div>
 
       <div className="flex items-center justify-between gap-5 mt-5">
-        <div className="relative flex items-center w-full max-w-md">
-          <FaSearch className="absolute ml-3 text-gray-300" />
-          <input
-            type="text"
-            placeholder="Search users...."
-            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none"
-          />
-        </div>
+        {/*----------Search--------*/}
+        <input
+          type="text"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+          placeholder="Search users...."
+          className="w-full py-2 px-4 border border-gray-300 rounded-lg focus:outline-none"
+        />
         <button className="text-[15px] px-3 py-1 rounded-sm text-gray-800 border-[1px] border-gray-300 hover:border-gray-400 flex items-center justify-center gap-2">
           <LiaFilterSolid /> Filters
         </button>
       </div>
 
-      <div className="p-6">
-        {/* Search */}
-        <input
-          type="text"
-          placeholder="Search user..."
-          className="border p-2 mb-4 w-full"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-
-        {/* Table */}
+      <div className="mt-10">
+        {/*---------Table--------*/}
         <table className="w-full border border-gray-200">
           <thead className="bg-gray-100">
             <tr>
