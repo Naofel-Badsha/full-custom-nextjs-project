@@ -5,6 +5,7 @@ import TotalProfit from "@/app/components/DashboardCompo/AllBox/TotalProfit";
 import SalesReport from "@/app/components/DashboardCompo/AllBox/SalesReport";
 import TasksOverview from "@/app/components/DashboardCompo/AllBox/TasksOverview";
 import UsersReview from "@/app/components/DashboardCompo/AllBox/UsersReview";
+import Users from "@/app/components/DashboardCompo/AllBox/Users";
 
 const DashboardPage = () => {
   return (
@@ -20,6 +21,7 @@ const DashboardPage = () => {
         <UsersReview />
         <TasksOverview />
       </div>
+      <Users />
     </div>
   );
 };
