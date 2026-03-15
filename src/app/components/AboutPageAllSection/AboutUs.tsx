@@ -1,6 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import { FaMoneyBill, FaWpforms } from "react-icons/fa";
 import { PiHandHeartFill } from "react-icons/pi";
 import CountUp from "../Recharts/CountUp";

@@ -1,7 +1,5 @@
-import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import {
   FaFacebook,
   FaInstagram,
@@ -233,11 +231,11 @@ const teams: TeamMember[] = [
 
 const AllTeamMenber = () => {
   return (
-    <section>
-      <div className="">
+    <section className="py-[100px] bg-white">
+      <div className="max-w-7xl mx-auto">
         <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
           {teams.map((team) => (
-            <div key={team.id} className="mt-6 py-5">
+            <div key={team.id} className="">
               <div className=" rounded-2xl overflow-hidden shadow bg-white border-[1px] border-gray-100">
                 <div className="relative">
                   <Image
