@@ -1,33 +1,33 @@
 "use client";
 type Geo = {
-  lat: string
-  lng: string
-}
+  lat: string;
+  lng: string;
+};
 
 type Address = {
-  street: string
-  suite: string
-  city: string
-  zipcode: string
-  geo: Geo
-}
+  street: string;
+  suite: string;
+  city: string;
+  zipcode: string;
+  geo: Geo;
+};
 
 type Company = {
-  name: string
-  catchPhrase: string
-  bs: string
-}
+  name: string;
+  catchPhrase: string;
+  bs: string;
+};
 
 type User = {
-  id: number
-  name: string
-  username: string
-  email: string
-  address: Address
-  phone: string
-  website: string
-  company: Company
-}
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: Address;
+  phone: string;
+  website: string;
+  company: Company;
+};
 
 import { FaEye, FaSearch } from "react-icons/fa";
 import { LiaFilterSolid } from "react-icons/lia";
@@ -92,46 +92,47 @@ const Users = () => {
       </div>
 
       <div className="mt-10">
-        {/*---------Table--------*/}
-        <table className="w-full border-gray-200">
-          <thead className="bg-gray-100">
-            <tr className="border-[1px] border-gray-100">
-              <th className="p-4">Name</th>
-              <th className="p-4">Email</th>
-              <th className="p-4">Phone</th>
-              <th className="p-4">Action</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            {currentUsers.map((user) => (
-              <tr
-                key={user.id}
-                className="text-center border-[1px] border-gray-100"
-              >
-                <td className="p-4">{user.name}</td>
-                <td className="p-4">{user.email}</td>
-                <td className="p-4">{user.phone}</td>
-
-                <td className="p-4 space-x-2">
-                  <button
-                    className="bg-blue-500 text-white px-2 py-1 rounded cursor-pointer"
-                    onClick={() => setSelectedUser(user)}
-                  >
-                    <FaEye />
-                  </button>
-                  <button className="bg-yellow-500 text-white px-3 py-1 rounded">
-                    <MdEdit />
-                  </button>
-                  <button className="bg-red-500 text-white px-3 py-1 rounded">
-                    <MdDelete />
-                  </button>
-                </td>
+        <div className="w-full overflow-x-auto">
+          {/*---------Table--------*/}
+          <table className="table border-gray-200">
+            <thead className="bg-gray-100">
+              <tr className="border-[1px] border-gray-100">
+                <th className="p-4">Name</th>
+                <th className="p-4">Email</th>
+                <th className="p-4">Phone</th>
+                <th className="p-4">Action</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
 
+            <tbody>
+              {currentUsers.map((user) => (
+                <tr
+                  key={user.id}
+                  className="text-center border-[1px] border-gray-100"
+                >
+                  <td className="p-4">{user.name}</td>
+                  <td className="p-4">{user.email}</td>
+                  <td className="p-4">{user.phone}</td>
+
+                  <td className="p-4 space-x-2">
+                    <button
+                      className="bg-blue-500 text-white px-2 py-1 rounded cursor-pointer"
+                      onClick={() => setSelectedUser(user)}
+                    >
+                      <FaEye />
+                    </button>
+                    <button className="bg-yellow-500 text-white px-3 py-1 rounded">
+                      <MdEdit />
+                    </button>
+                    <button className="bg-red-500 text-white px-3 py-1 rounded">
+                      <MdDelete />
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
         {/*----------Pagination-----------*/}
         <div className="flex gap-2 mt-4">
           {Array.from({ length: totalPages }, (_, i) => (
