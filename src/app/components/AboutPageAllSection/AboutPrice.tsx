@@ -49,23 +49,22 @@ const AboutPrice = () => {
           </h2>
         </div>
 
-        {/* Pricing Cards Container */}
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        {/*---------Pricing Cards Container----------*/}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ">
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative p-8 md:p-10 rounded-[40px] transition-all duration-300 ${
+              className={`relative p-8 md:p-10 rounded-xl transition-all duration-300 ${
                 plan.isPopular
                   ? "bg-[#044a3a] text-white overflow-hidden"
-                  : "bg-white border border-gray-100 shadow-xl shadow-gray-200/50 text-[#033d31]"
+                  : "bg-white border border-gray-100 shadow  text-[#033d31]"
               }`}
             >
-              {/* Business Plan এর উপরের ডেকোরেটিভ সার্কেল */}
               {plan.isPopular && (
                 <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
               )}
 
-              {/* Price Tag */}
+              {/*-----------Price Tag-------------*/}
               <div className="inline-flex items-baseline bg-[#00a859] text-white px-6 py-3 rounded-2xl mb-8">
                 <span className="text-4xl font-bold">${plan.price}</span>
                 <span className="ml-2 text-sm font-medium opacity-90">
@@ -73,14 +72,14 @@ const AboutPrice = () => {
                 </span>
               </div>
 
-              {/* Plan Name */}
+              {/*------Plan Name--------*/}
               <h3
                 className={`text-xl font-bold mb-8 ${plan.isPopular ? "text-white" : "text-[#033d31]"}`}
               >
                 {plan.name}
               </h3>
 
-              {/* Features List */}
+              {/*---------Features List----------*/}
               <ul className="space-y-5 mb-12">
                 {plan.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-3">
@@ -96,12 +95,12 @@ const AboutPrice = () => {
                 ))}
               </ul>
 
-              {/* Bottom Line for Middle Card */}
+              {/*----------Bottom Line for Middle Card----------*/}
               {plan.isPopular && (
                 <div className="h-[1px] bg-white/10 w-full mb-8"></div>
               )}
 
-              {/* Button */}
+              {/*----------Button-----------*/}
               <button
                 className={`w-full md:w-auto px-8 py-4 rounded-xl font-bold transition-all ${
                   plan.isPopular
