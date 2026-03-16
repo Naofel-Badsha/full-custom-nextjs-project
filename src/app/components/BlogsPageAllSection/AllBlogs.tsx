@@ -49,14 +49,14 @@ const AllBlogs = async () => {
               <p className="text-[15px]">{blog.description.slice(1, 120)}...</p>
               <div className="flex items-center justify-between gap-2 mt-5">
                 <div className="flex items-center gap-2">
-                  <Image
-                    src={blog.user.profile_image ?? "/user.png"}
-                    alt="Author"
-                    width={30}
-                    height={30}
-                    className="rounded-full"
-                  />
-                  <p className="text-[14px]">{blog.user.name}</p>
+  <Image
+    src={blog.user?.profile_image ?? "/user.png"}
+    alt={blog.user?.name ?? "Author"}
+    width={30}
+    height={30}
+    className="rounded-full"
+  />
+                   <p className="text-sm">{blog.user?.name ?? "Unknown Author"}</p>
                 </div>
 
                 <div className="flex items-center gap-2">
