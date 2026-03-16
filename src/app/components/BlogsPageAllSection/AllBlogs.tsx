@@ -20,6 +20,7 @@ const AllBlogs = async () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
+              blog={blog}
               className="bg-white p-5 rounded-xl shadow border-[1px] border-gray-200 space-y-3"
             >
               {/*----Blog----Cover---Images----*/}
@@ -66,7 +67,7 @@ const AllBlogs = async () => {
               {/*--------button-------*/}
               <div className="flex items-center w-full pb-3">
                 <Link
-                  href="our-team"
+                  href={`/blogs/${blog.id}`}
                   className="w-full inline-flex items-center justify-center gap-2 mt-6 bg-[#00a651] hover:bg-[#008f45] text-white px-6 py-2 rounded-full font-medium uppercase transition "
                 >
                   See More Details
