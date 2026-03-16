@@ -1,5 +1,6 @@
 import { Blog } from "@/app/types/blog";
-import React from "react";
+import Image from "next/image";
+import { FaCalendar, FaClock, FaUser } from "react-icons/fa";
 
 async function getBlogs(): Promise<Blog[]> {
   const res = await fetch("https://dev.to/api/articles", {
@@ -18,10 +19,27 @@ const AllBlogs = async () => {
           {blogs.map((blog) => (
             <div
               key={blog.id}
-              className="bg-white p-5 rounded-xl shadow border-[1px] border-gray-200"
+              className="bg-white p-5 rounded-xl shadow border-[1px] border-gray-200 space-y-3"
             >
-              <h2 className="">{blog.title}</h2>
-              <p className="">{blog.description}</p>
+              <h2 className="text-[20px]">{blog.title.slice(1, 40)}..</h2>
+              <p className="text-[15px]">{blog.description.slice(1, 120)}...</p>
+              <div className="flex items-center justify-between gap-2 mt-5">
+                <div className="flex items-center gap-2">
+                  <Image
+                    src={blog.user.profile_image ?? "/user.png"}
+                    alt="Author"
+                    width={30}
+                    height={30}
+                    className="rounded-full"
+                  />
+                  <p className="text-[14px]">{blog.user.name}</p>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <FaCalendar />
+                  <p className="text-[14px]">{blog.readable_publish_date}</p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
