@@ -39,6 +39,11 @@ const AllBlogs = async () => {
                   <FaCalendar />
                   <p className="text-[14px]">{blog.readable_publish_date}</p>
                 </div>
+
+                                <div className="flex items-center gap-2">
+                  <FaCalendar />
+                  <p className="text-[14px]">{blog.readable_publish_date}</p>
+                </div>
               </div>
             </div>
           ))}
