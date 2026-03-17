@@ -420,10 +420,11 @@ const Navbar = () => {
                   className="text-sm/6 font-semibold text-gray-900"
                 >
                   Contact Us
-                </Link>
+                </Link> 
+                <br className=""/>
                 <Link
                   href="/dashboard"
-                  className="text-sm/6 font-semibold text-gray-900"
+                  className="text-sm/6 font-semibold text-gray-900 "
                 >
                   Dashboard
                 </Link>
