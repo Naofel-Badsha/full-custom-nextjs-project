@@ -1,25 +1,42 @@
+"use client";
+
 import { Blog } from "@/app/types/blog";
 import Image from "next/image";
 import Link from "next/link";
-import { FaCalendar, FaClock, FaUser } from "react-icons/fa";
-import SearchBlog from "./SearchBlog";
+import { FaCalendar} from "react-icons/fa";
+import { useEffect, useState } from "react";
 
-async function getBlogs(): Promise<Blog[]> {
-  const res = await fetch("https://dev.to/api/articles", {
-    next: { revalidate: 60 },
-  });
-  return res.json();
-}
+const AllBlogs =  () => {
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [search, setSearch] = useState("");
+  console.log(search)
 
-const AllBlogs = async () => {
-  const blogs: Blog[] = await getBlogs();
+  const blogFilter = blogs.filter((blog) =>
+    blog.title?.toLowerCase().includes(search.toLowerCase())
+  )
+
+  //---------fetch blogs-------
+  useEffect(() => {
+      const getBlogs = async() => {
+        const res = await fetch("https://dev.to/api/articles");
+        const data = await res.json()
+        setBlogs(data);
+      };
+      getBlogs();
+  }, []);
   
 
   return (
     <section className="py-[100px] bg-[#EAF3EA]">
       <div className="max-w-7xl mx-auto">
         {/* -------Search-----blog---------*/}
-        <SearchBlog blogs={blogs}/>
+        <div className="flex bg-white py-3 px-5 shadow w-[700px] m-auto rounded-md">
+          <input type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            placeholder="Search blog...?"
+            className="py-2 px-4 rounded-md bg-[#EAF3EA] w-full border-0 outline-0" />
+        </div>
 
         <div className="grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10">
           {blogs.map((blog) => (
