@@ -28,6 +28,7 @@ const AllBlogs = () => {
   return (
     <section className="py-[100px] bg-[#EAF3EA]">
       <div className="max-w-7xl mx-auto">
+        <h1>Total Blog: {blogs.length}</h1>
         {/* -------Search-----blog---------*/}
         <div className="flex bg-white py-3 px-5 shadow w-[700px] m-auto rounded-md">
           <input type="text"
