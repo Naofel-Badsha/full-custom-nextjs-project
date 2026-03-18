@@ -100,7 +100,7 @@ const ContactUsPage = () => {
 
 
       {/*----------Contact-------Form----------*/}
-      <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+      <div className=" bg-gray-50 flex items-center justify-center py-[100px]">
         <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
           {/* Left Side: Content & Image */}
