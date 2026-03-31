@@ -3,16 +3,16 @@ import Image from "next/image";
 const WorkingProcess = () => {
   return (
     <section className="py-[100px] ">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         {/*------------Content-----------*/}
         <div className="space-y-5">
           <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium m-auto">
             Working Process
           </div>
-          <h2 className="text-[#1d1d1d] font-semibold text-[42px] capitalize leading-13 text-center mt-5">
+          <h2 className="text-[#1d1d1d] font-semibold text-[30px] lg:text-[42px] capitalize leading-13 text-center mt-5">
             Easy Step of Working Procces.
           </h2>
-          <p className="text-[18px] font-light text-[#6d6d6d] text-center w-[600px] m-auto">
+          <p className="text-[16px] lg:text-[18px] font-light text-[#6d6d6d] text-center w-[600px] m-auto">
             Sagittis mi eros purus commodo himenaeos ac. Primis ligula ligula
             ultricies lacinia interdum etiam proin. Blandit fames finibus
             consequat luctus.
@@ -42,7 +42,7 @@ const WorkingProcess = () => {
             <h3 className="text-[24px] font-semibold text-center mt-8">
               Choose Insurance
             </h3>
-            <p className="text-[18px] font-light text-center mt-4 mb-2">
+            <p className="text-[16px] lg:text-[18px] font-light text-center mt-4 mb-2">
               Class commodo quam praesent phasellus ornare. Praesent senectus
               nullam curabitur torquent duis id. Quam quis consequat amet.
             </p>
@@ -68,7 +68,7 @@ const WorkingProcess = () => {
             <h3 className="text-[24px] font-semibold text-center mt-8">
               Meet with Agent
             </h3>
-            <p className="text-[18px] font-light text-center mt-4 mb-2">
+            <p className="text-[16px] lg:text-[18px] font-light text-center mt-4 mb-2">
               Nunc dolor praesent nisl morbi ligula blandit vel et eleifend. Sit
               mus leo duis euismod imperdiet. Augue sagittis tempor eu, cras
               facilisi.
@@ -95,7 +95,7 @@ const WorkingProcess = () => {
             <h3 className="text-[24px] font-semibold text-center mt-8">
               Start Your Policy
             </h3>
-            <p className="text-[18px] font-light text-center mt-4 mb-2">
+            <p className="text-[16px] lg:text-[18px] font-light text-center mt-4 mb-2">
               Natoque ex suspendisse nostra fames ultricies arcu. Sagittis nisi
               neque vitae litora viverra sodales. Augue viverra dis maximus
               adipiscing cursus.
