@@ -172,7 +172,7 @@ const ContactUsPage = () => {
               />
               <textarea
                 placeholder="Message"
-                rows="4"
+                rows={4}
                 className="w-full p-4 rounded-xl border-none bg-white focus:ring-2 focus:ring-emerald-500 outline-none transition-all md:col-span-2 shadow-sm"
               ></textarea>
 
