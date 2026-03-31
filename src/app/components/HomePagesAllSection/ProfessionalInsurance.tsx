@@ -39,14 +39,15 @@ const ProfessionalInsurance = () => {
   return (
     <section className="py-[100px] bg-[#EAF3EA]">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="flex items-center justify-center gap-10">
+        <div className="flex items-center flex-col lg:flex-row justify-center gap-10">
+          {/*----------Content---------*/}
           <div>
             {/*------------Content-----------*/}
             <div className="space-y-5">
               <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">
                 Professional Insurance
               </div>
-              <h2 className="text-[#1d1d1d] font-semibold text-[42px] capitalize leading-13 mt-5">
+              <h2 className="text-[#1d1d1d] font-semibold text-[30px] lg:text-[42px] capitalize leading-13 mt-5">
                 The best time to get insurance is before you need it.
               </h2>
               <p className="text-[18px] font-light text-[#6d6d6d] w-[600px]">
