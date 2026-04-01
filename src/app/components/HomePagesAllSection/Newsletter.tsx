@@ -2,7 +2,7 @@ import React from "react";
 
 const Newsletter = () => {
   return (
-    <section className="">
+    <section className=" px-6">
       <div
         className="relative w-full overflow-hidden bg-cover bg-center px-8 py-25 text-white"
         style={{
@@ -17,21 +17,21 @@ const Newsletter = () => {
         </div>
 
         {/*-------------Content Section----------------*/}
-        <div className="flex items-center justify-between">
-          <div className="space-y-3">
-            <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">
+        <div className="max-w-7xl m-auto px-6 flex items-center justify-between flex-col lg:flex-row">
+          <div className="space-y-3 flex-1">
+            <div className="w-fit m-auto lg:m-0 py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">
               Newsletter
             </div>
-            <h1 className="text-left text-[42px] font-semibold leading-tight md:text-5xl lg:text-6xl drop-shadow-lg">
+            <h1 className="text-center mt-5 lg:text-left text-[30px] lg:text-[42px] font-semibold leading-tight md:text-5xl lg:text-6xl drop-shadow-lg">
               Get Daily Insurance News.
             </h1>
-            <p className="text-left text-[18px] text-[#eee] font-light">
+            <p className="text-center lg:text-left text-[18px] text-[#eee] font-light">
               Commodo sagittis finibus consequat facilisis nibh vel.
             </p>
           </div>
           {/*-------------Form Section----------------*/}
-          <div className="">
-            <form className="flex flex-col sm:flex-row gap-4 w-full max-w-xl">
+          <div className="mt-10 lg:mt-0 flex-1">
+            <form className="flex flex-col sm:flex-row gap-4 ">
               <input
                 type="email"
                 placeholder="Email Here"

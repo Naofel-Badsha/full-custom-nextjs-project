@@ -65,16 +65,16 @@ const newsAndBlogs = [
 const NewsAndBlog = () => {
     return (
         <section className="py-[100px]">
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-7xl mx-auto px-6">
                 {/*------------Content-----------*/}
                 <div className="space-y-5">
                     <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium m-auto">
                         News & Blog
                     </div>
-                    <h2 className="text-[#1d1d1d] font-semibold text-[42px] capitalize leading-13 text-center mt-5">
+                    <h2 className="text-[#1d1d1d] font-semibold text-[30px] lg:text-[42px] capitalize text-center mt-5">
                         Get the latest updates & <br /> information from our experts.
                     </h2>
-                    <p className="text-[18px] font-light text-[#6d6d6d] text-center w-[600px] m-auto">
+                    <p className="text-[16px] lg:text-[18px] font-light text-[#6d6d6d] text-center w-[600px] m-auto">
                         Magnis litora leo parturient integer neque at imperdiet litora.
                     </p>
                 </div>

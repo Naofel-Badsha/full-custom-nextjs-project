@@ -5,7 +5,7 @@ import { FaMessage } from "react-icons/fa6"
 
 const Footer = () => {
   return (
-    <footer className="bg-[#f8f9f2] pt-16 pb-8 px-6 md:px-20 font-sans text-[#555]">
+    <footer className="bg-[#f8f9f2] pt-16 pb-8 px-6 md:px-20 font-sans text-[#555]  w-full overflow-hidden">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
         
         {/*---------Logo & Address--------Section----------*/}
