@@ -44,13 +44,13 @@ const ProfessionalInsurance = () => {
           <div>
             {/*------------Content-----------*/}
             <div className="space-y-5">
-              <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">
+              <div className="w-fit m-auto lg:m-0 py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">
                 Professional Insurance
               </div>
-              <h2 className="text-[#1d1d1d] font-semibold text-[30px] lg:text-[42px] capitalize leading-13 mt-5">
+              <h2 className="text-[#1d1d1d] font-semibold text-[30px] lg:text-[42px] capitalize mt-5 text-center lg:text-left">
                 The best time to get insurance is before you need it.
               </h2>
-              <p className="text-[18px] font-light text-[#6d6d6d] w-[600px]">
+              <p className="text-[16px] lg:text-[18px] font-light text-[#6d6d6d] text-center lg:text-left">
                 Tortor ligula pulvinar finibus primis eget tristique lacinia
                 habitant.
               </p>

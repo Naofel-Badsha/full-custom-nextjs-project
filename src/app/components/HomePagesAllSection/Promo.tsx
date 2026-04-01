@@ -4,7 +4,7 @@ import React from "react";
 const Promo = () => {
   return (
     <section className="py-[100px] bg-[#f1f7f2]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         <div
           className="relative w-full overflow-hidden rounded-2xl bg-cover bg-center px-8 py-15 text-center text-white shadow-xl"
           style={{
@@ -23,7 +23,7 @@ const Promo = () => {
             <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">
               Promo
             </div>
-            <h1 className="max-w-4xl text-[42px] font-semibold leading-tight md:text-5xl lg:text-6xl drop-shadow-lg">
+            <h1 className="max-w-4xl text-[30px] lg:text-[42px] font-semibold leading-tight md:text-5xl lg:text-6xl drop-shadow-lg">
               Save 30% On Your Every <br className="hidden md:block" /> Home
               Insurance Policy.
             </h1>
