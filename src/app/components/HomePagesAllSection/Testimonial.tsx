@@ -99,101 +99,87 @@ const testimonials: testimonialTypes[] = [
 
 const Testimonial = () => {
   return (
-    <section className="py-[100px]">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-16 lg:py-[100px] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row items-center gap-10">
-          {/*------------Content-----------*/}
-          <div className="space-y-5">
-            <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium">
+
+          {/*------------ Content Section -----------*/}
+          <div className="w-full lg:w-1/2 space-y-5 text-center lg:text-left">
+            <div className="w-fit mx-auto lg:mx-0 py-1.5 px-4 shadow-sm bg-white rounded-full text-[#01A04C] border border-gray-200 font-medium">
               Testimonial
             </div>
-            <h2 className="text-[#1d1d1d] font-semibold text-[42px] capitalize leading-13 mt-5">
-              Read our success story to find the happiness.
+            <h2 className="text-[#1d1d1d] font-bold text-2xl md:text-3xl lg:text-[42px] leading-tight capitalize">
+              Read our success story <br className="hidden lg:block" /> to find the happiness.
             </h2>
-            <p className="text-[18px] font-light text-[#6d6d6d] w-[600px]">
+            <p className="text-base lg:text-lg font-light text-[#6d6d6d] max-w-lg mx-auto lg:mx-0">
               Quisque montes porta accumsan sodales aptent imperdiet mauris dui.
               Cubilia magna elit in senectus sed metus imperdiet torquent.
             </p>
-            <div className="flex items-center gap-4">
-              <div>
-                <Image
-                  src="/assets/review-1.webp"
-                  alt="Team Member"
-                  width={500}
-                  height={500}
-                  className="w-full h-[90px] object-cover shadow rounded border-[1px] border-gray-200"
-                ></Image>
-              </div>
-              <div>
-                <Image
-                  src="/assets/review-2.webp"
-                  alt="Team Member"
-                  width={500}
-                  height={500}
-                  className="w-full h-[90px] object-cover shadow rounded border-[1px] border-gray-200"
-                ></Image>
+
+            <div className="flex items-center justify-center lg:justify-start gap-4">
+              {/* এখানে ছবিগুলোর সাইজ রেসপনসিভ করা হয়েছে */}
+              <div className="flex flex-row gap-10 -space-x-4">
+                <Image src="/assets/review-1.webp" alt="Review" width={120} height={40} className="w-full object-contain bg-white p-1 rounded border shadow-sm" />
+                <Image src="/assets/review-2.webp" alt="Review" width={120} height={40} className="w-full object-contain bg-white p-1 rounded border shadow-sm" />
               </div>
             </div>
           </div>
 
-          {/*------------Slider-----------*/}
-          <Swiper
-            slidesPerView={1}
-            centeredSlides={true}
-            loop={true}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            modules={[Autoplay, Pagination]}
-            className="mySwiper"
-          >
-            {testimonials.map((testimonial) => (
-              <SwiperSlide key={testimonial.id}>
-                <div className="bg-[#e6f7ee] p-6 rounded-2xl shadow space-y-5 w-full">
-                  <div className="group-hover:scale-110 duration-500">
-                    <div className="bg-[#FFFFFF] p-4 text-4xl text-[#00863F] rounded-full  font-semibold shadow w-fit border">
+          {/*------------ Slider Section -----------*/}
+          <div className="w-full lg:w-1/2 min-w-0"> {/* min-w-0 Swiper এর জন্য জরুরি */}
+            <Swiper
+              slidesPerView={1}
+              spaceBetween={20}
+              loop={true}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              modules={[Autoplay, ]}
+              className="mySwiper w-full"
+            >
+              {testimonials.map((testimonial) => (
+                <SwiperSlide key={testimonial.id} className="pb-10">
+                  <div className="bg-[#e6f7ee] p-6 md:p-8 rounded-2xl shadow-sm space-y-6 w-full">
+                    <div className="bg-white p-4 text-3xl text-[#00863F] rounded-full shadow-sm w-fit border border-emerald-100">
                       <FaQuoteLeft />
                     </div>
-                  </div>
-                  <p className="text-[#1d1d1d] text-[19px]">
-                    {testimonial.content}
-                  </p>
-                  <div className="flex gap-2 items-center">
-                    <div className="">
+
+                    <p className="text-[#1d1d1d] text-lg md:text-xl leading-relaxed">
+                      "{testimonial.content}"
+                    </p>
+
+                    <div className="flex gap-4 items-center">
                       <Image
-                        src="/assets/client-1.webp"
-                        alt="Team Member"
-                        width={500}
-                        height={500}
-                        className="w-[60px] h-[60px] object-cover shadow rounded-full border-[1px] border-gray-200"
-                      ></Image>
-                    </div>
-                    <div className="">
-                      <h4 className="text-[17px] text-[#1d1d1d] font-medium">
-                        {testimonial.name}
-                      </h4>
-                      <p className="text-[14px] text-green-500 font-light">
-                        {testimonial.position}
-                      </p>
-                      <div className="flex items-center gap-1">
-                        {testimonial.stars.map((star) => (
-                          <span
-                            className="text-[#FFC400] text-[14px]"
-                            key={star.id}
-                          >
-                            {star.icon}
-                          </span>
-                        ))}
+                        src={testimonial.image}
+                        alt={testimonial.name}
+                        width={60}
+                        height={60}
+                        className="w-14 h-14 object-cover shadow rounded-full border-2 border-white"
+                      />
+                      <div>
+                        <h4 className="text-lg text-[#1d1d1d] font-semibold">
+                          {testimonial.name}
+                        </h4>
+                        <p className="text-sm text-green-600 font-medium">
+                          {testimonial.position}
+                        </p>
+                        <div className="flex items-center gap-1 mt-1">
+                          {testimonial.stars.map((star) => (
+                            <span className="text-[#FFC400] text-xs" key={star.id}>
+                              {star.icon}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
         </div>
-        <div className="pt-20 mt-15 border-t-[1px] border-gray-200">
+        <div className="pt-16 mt-10 border-t border-gray-200">
           <CountUp />
         </div>
       </div>
