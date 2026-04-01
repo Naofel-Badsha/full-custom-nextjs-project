@@ -47,16 +47,16 @@ const insurancesLists: insurancesTypes[] = [
 const CostCalculate = () => {
   return (
     <section className="py-[100px] bg-[#EAF3EA]">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto px-6">
         {/*------------Content-----------*/}
         <div className="space-y-5">
           <div className="w-fit py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium m-auto">
             Cost Calculate
           </div>
-          <h2 className="text-[#1d1d1d] font-semibold text-[42px] capitalize leading-13 text-center mt-5">
-            Be part of you to guarantee your <br /> future.
+          <h2 className="text-[#1d1d1d] font-semibold text-[30px] lg:text-[42px] capitalize leading-13 text-center mt-5">
+            Be part of you to guarantee your <br className="hidden lg:block"/> future.
           </h2>
-          <p className="text-[18px] font-light text-[#6d6d6d] text-center w-[600px] m-auto">
+          <p className="text-[16px] lg:text-[18px] font-light text-[#6d6d6d] text-center w-[600px] m-auto">
             Sagittis mi eros purus commodo himenaeos ac. Primis ligula ligula
             ultricies lacinia interdum etiam proin. Blandit fames finibus
             consequat luctus.
@@ -69,10 +69,10 @@ const CostCalculate = () => {
               </div>
             </div>
             <div className=" space-y-1.5">
-              <h2 className="text-[#eee] text-[24px] font-semibold">
+              <h2 className="text-[#eee] text-[20px] lg:text-[24px] font-medium lg:font-semibold">
                 Report 2023
               </h2>
-              <p className="text-[#e6e6e6] text-[18px] font-light">
+              <p className="text-[#e6e6e6] text-[16px] lg:text-[18px] font-light">
                 Annual insurance list
               </p>
             </div>
