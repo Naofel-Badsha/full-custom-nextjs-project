@@ -1,9 +1,14 @@
-import React from 'react'
+import AllFaqs from "@/app/components/FAQAllSection/AllFaqs";
+import FAQBanner from "@/app/components/FAQAllSection/FAQBanner";
+import React from "react";
 
 const FAQPage = () => {
   return (
-    <div>FAQPage</div>
-  )
-}
+    <div>
+      <FAQBanner />
+      <AllFaqs />
+    </div>
+  );
+};
 
-export default FAQPage
+export default FAQPage;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-const AboutBanner = () => {
+const FAQBanner = () => {
   return (
     <section className="">
       {/*------------Banner-------------*/}
@@ -33,12 +33,12 @@ const AboutBanner = () => {
               href="/contactus"
               className="text-xl font-medium text-white hover:text-green-500 uppercase"
             >
-              Our contactus
+              Our Contactus
             </Link>
           </div>
 
           <h1 className="text-[42px] font-bold leading-12 mb-8 text-center mt-3">
-            ABOUT AGENCY
+            OUR CUSTOMER FAQ
           </h1>
         </div>
       </div>
@@ -46,4 +46,4 @@ const AboutBanner = () => {
   );
 };
 
-export default AboutBanner;
+export default FAQBanner;

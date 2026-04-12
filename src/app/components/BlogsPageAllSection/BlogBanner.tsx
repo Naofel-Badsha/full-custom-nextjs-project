@@ -29,10 +29,10 @@ const BlogBanner = () => {
                 </Link>{" "}
                 -
                 <Link
-                  href="/blogs"
+                  href="/contactus"
                   className="text-xl font-medium text-white hover:text-green-500 uppercase"
                 >
-                  Blogs
+                 Our Contactus
                 </Link>
               </div>
     

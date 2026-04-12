@@ -30,10 +30,10 @@ const TeamBanner = () => {
             </Link>{" "}
             -
             <Link
-              href="/our-team"
+              href="/contactus"
               className="text-xl font-medium text-white hover:text-green-500 uppercase"
             >
-              Our Team
+              Our Contactus
             </Link>
           </div>
 
