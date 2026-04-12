@@ -1,5 +1,4 @@
 import { CheckCircleIcon } from "@heroicons/react/24/outline";
-import React from "react";
 
 const AboutPrice = () => {
   const plans = [
@@ -35,14 +34,14 @@ const AboutPrice = () => {
     },
   ];
   return (
-    <section className="py-[100px] bg-white">
+    <section className="py-[100px] bg-white px-6">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="w-fit m-auto py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-semibold ">
+          <div className="w-fit m-auto py-1.5 px-4 shadow-md bg-white rounded-full text-[#01A04C] border-[1px] border-gray-200 font-medium ">
             Pricing Plan
           </div>
-          <h2 className="text-[40px] font-bold text-[#033d31] leading-tight mt-4">
+          <h2 className="text-[30px] lg:text-[42px] font-bold text-[#033d31] leading-tight mt-4">
             Insurance <span className="text-[#033d31]">pricing plans</span>{" "}
             affordable <br className="hidden md:block" />
             coverage for every budget
@@ -50,7 +49,7 @@ const AboutPrice = () => {
         </div>
 
         {/*---------Pricing Cards Container----------*/}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
           {plans.map((plan, index) => (
             <div
               key={index}
@@ -66,7 +65,9 @@ const AboutPrice = () => {
 
               {/*-----------Price Tag-------------*/}
               <div className="inline-flex items-baseline bg-[#00a859] text-white px-6 py-3 rounded-2xl mb-8">
-                <span className="text-4xl font-bold">${plan.price}</span>
+                <span className="text-[20px] lg:text-[30px] font-bold">
+                  ${plan.price}
+                </span>
                 <span className="ml-2 text-sm font-medium opacity-90">
                   / Per Month
                 </span>
