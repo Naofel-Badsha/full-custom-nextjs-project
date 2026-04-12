@@ -10,9 +10,9 @@ const HAboutUsSection = () => {
         <div className="flex flex-col lg:flex-row gap-8">
           {/*-----------Left-------Side---------*/}
           <div className="flex-1">
-            <div className="flex  gap-8 items-center justify-center">
+            <div className="flex gap-4 lg:gap-8 items-center justify-center">
               {/*-------Iamges-----Box----1-------*/}
-              <div className="space-y-8">
+              <div className="space-y-4 lg:space-y-8">
                 <Image
                   src="/assets/about-1.webp"
                   alt="Insurance Team"
@@ -29,7 +29,7 @@ const HAboutUsSection = () => {
                 />
               </div>
               {/*-------Iamges-----Box----2-------*/}
-              <div className="space-y-8 flex items-center">
+              <div className="space-y-4 lg:space-y-8 flex items-center">
                 <div className="relative ">
                   <Image
                     src="/assets/about-3.webp"

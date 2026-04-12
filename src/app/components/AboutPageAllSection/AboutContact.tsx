@@ -2,10 +2,9 @@ import Image from "next/image";
 
 const AboutContact = () => {
   return (
-    <div className="py-[100px] bg-[#044a3a] flex items-center justify-center overflow-hidden">
-      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-[100px] bg-[#044a3a] flex items-center justify-center overflow-hidden ">
+      <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center px-6">
         <div className="relative group">
-          {/* মেইন ইমেজ কন্টেইনার */}
           <div className="relative z-10 rounded-[2.5rem] overflow-hidden border-[12px] border-white/5 shadow-2xl">
             <Image
             width={500}
@@ -17,8 +16,7 @@ const AboutContact = () => {
           </div>
 
           {/*---------Infinity------Badgh--------*/}
-          <div className="absolute -bottom-8 -right-8 md:-bottom-12 md:-right-12 z-20 w-32 h-32 md:w-44 md:h-44 bg-white rounded-full flex items-center justify-center shadow-2xl">
-            {/* মাঝখানের ফোন আইকন */}
+          <div className="absolute bottom-0 right-0 md:-bottom-12 md:-right-5 z-20 w-32 h-32 md:w-44 md:h-44 bg-white rounded-full flex items-center justify-center shadow-2xl">
             <div className="absolute z-10 text-[#044a3a] bg-[#044a3a]/5 p-3 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -56,15 +54,15 @@ const AboutContact = () => {
         </div>
 
         {/*-----------Tesx--------Content------*/}
-        <div className="text-white space-y-8">
-          <h1 className="text-[50px] font-medium">
-            What matters most get your free insurance{" "}
+        <div className="text-white space-y-8 leading-12 lg:leading-15">
+          <h1 className="text-[40px] lg:text-[42px] font-medium">
+            What matters most get your free insurance {""}
             <span className="font-bold">
               quote today!
             </span>
           </h1>
 
-          <p className="text-white/80 text-lg md:text-xl leading-relaxed max-w-xl">
+          <p className="text-white/80 text-[16px] lg:text-[18px] leading-relaxed max-w-xl">
             Whether it's your home, health, car, or business, we've got you
             covered. Get your free insurance quote today and discover the peace
             of mind that comes with reliable, comprehensive protection tailored
@@ -97,7 +95,7 @@ const AboutContact = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
