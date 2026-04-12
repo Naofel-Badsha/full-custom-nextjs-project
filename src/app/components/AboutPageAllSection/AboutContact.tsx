@@ -17,7 +17,7 @@ const AboutContact = () => {
 
           {/*---------Infinity------Badgh--------*/}
           <div className="absolute bottom-0 right-0 md:-bottom-12 md:-right-5 z-20 w-32 h-32 md:w-44 md:h-44 bg-white rounded-full flex items-center justify-center shadow-2xl">
-            <div className="absolute z-10 text-[#044a3a] bg-[#044a3a]/5 p-3 rounded-full">
+            <div className="absolute z-10 text-[#008F45] bg-[#008F45]/10 p-3 rounded-full animate-pulse">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
@@ -44,7 +44,7 @@ const AboutContact = () => {
                   d="M 50, 50 m -38, 0 a 38,38 0 1,1 76,0 a 38,38 0 1,1 -76,0"
                 />
               </defs>
-              <text className="text-[9px] font-extrabold uppercase tracking-[2.5px] fill-[#044a3a]">
+              <text className="text-[9px] font-semibold uppercase tracking-[2.5px] fill-[#008F45]">
                 <textPath xlinkHref="#circlePath">
                   • Contact Now • Contact Now • Contact Now
                 </textPath>
@@ -70,7 +70,7 @@ const AboutContact = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
-            <button className="bg-white text-[#044a3a] px-10 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all transform hover:-translate-y-1 shadow-lg">
+            <button className="bg-white text-[#008F45] px-10 py-4 rounded-xl font-bold text-lg hover:bg-opacity-90 transition-all transform hover:-translate-y-1 shadow-lg">
               Contact Now
             </button>
 

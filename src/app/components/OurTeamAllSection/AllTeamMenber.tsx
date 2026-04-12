@@ -231,9 +231,9 @@ const teams: TeamMember[] = [
 
 const AllTeamMenber = () => {
   return (
-    <section className="py-[100px] bg-white">
+    <section className="py-[100px] bg-white px-6">
       <div className="max-w-7xl mx-auto">
-        <div className="grid gap-5 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4">
+        <div className="grid gap-5 lg:gap-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
           {teams.map((team) => (
             <div key={team.id} className="">
               <div className=" rounded-2xl overflow-hidden shadow bg-white border-[1px] border-gray-100">
@@ -243,7 +243,7 @@ const AllTeamMenber = () => {
                     alt="Team Member"
                     width={500}
                     height={500}
-                    className="w-full h-[420px] object-cover shadow p-3"
+                    className="w-full h-[440px] object-cover shadow p-3"
                   ></Image>
                   <div className="absolute bottom-6 left-6 right-6 bg-green-800 rounded-xl px-6 py-4 flex items-center justify-between">
                     {/*---------Name+Role-------------*/}
