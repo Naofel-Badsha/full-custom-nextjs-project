@@ -1,11 +1,12 @@
 import CaseStudyBanner from "@/app/components/CaseStudyAllSection/CaseStudyBanner";
-import Image from "next/image";
-import React from "react";
+import CasestudyServices from "@/app/components/CaseStudyAllSection/CasestudyServices";
+
 
 const CaseStudyPage = () => {
   return (
     <div className="">
       <CaseStudyBanner />
+      <CasestudyServices />
     </div>
   );
 };
