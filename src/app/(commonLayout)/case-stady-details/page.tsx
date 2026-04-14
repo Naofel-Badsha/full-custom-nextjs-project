@@ -126,7 +126,7 @@ const CaseStadyDetailsPage = () => {
 
               {/* Contact Card */}
               <div className="relative rounded-2xl overflow-hidden h-64 flex items-center p-8 text-white group cursor-pointer">
-                <div className="absolute inset-0 bg-black z-10" />
+                <div className="absolute inset-0 bg-[#019a49] z-10" />
                 <div className="absolute inset-0 bg-[url('/contact-bg.jpg')] bg-cover group-hover:scale-105 transition-transform" />
                 <div className="relative z-20">
                   <h3 className="text-xl font-bold mb-2">Contact Us</h3>
@@ -135,8 +135,8 @@ const CaseStadyDetailsPage = () => {
                     guidance.
                   </p>
                   <div className="flex items-center gap-3">
-                    <div className="bg-[#019a49] p-2 rounded-lg">
-                      <FaPhone />{" "}
+                    <div className="bg-white p-2 rounded-lg">
+                      <FaPhone className="text-[#019a49]"/>{" "}
                     </div>
                     <span className="font-bold">+123 456 - 789</span>
                   </div>
