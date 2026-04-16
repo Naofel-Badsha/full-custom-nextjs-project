@@ -1,5 +1,4 @@
 "use client";
-
 import { Blog } from "@/app/types/blog";
 import Image from "next/image";
 import Link from "next/link";
@@ -27,8 +26,8 @@ const AllBlogs = () => {
 
   return (
     <section className="py-[100px] bg-[#EAF3EA]">
-      <div className="max-w-7xl mx-auto">
-        <h1>Total Blog: {blogs.length}</h1>
+      <div className="max-w-7xl mx-auto px-6">
+        <h1 className="text-center mb-7 text-2xl">Total Blog: {blogs.length}</h1>
         {/* -------Search-----blog---------*/}
         <div className="flex bg-white py-3 px-5 shadow w-[700px] m-auto rounded-md">
           <input type="text"
