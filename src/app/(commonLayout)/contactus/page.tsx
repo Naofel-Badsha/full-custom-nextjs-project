@@ -76,7 +76,7 @@ const ContactUsPage = () => {
       </section>
 
       {/* -------Box-------Card---*/}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto py-[100px]">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto py-[100px] px-6">
         {contactData.map((item) => (
           <div
             key={item.id}
@@ -100,7 +100,7 @@ const ContactUsPage = () => {
 
 
       {/*----------Contact-------Form----------*/}
-      <div className=" bg-gray-50 flex items-center justify-center py-[100px]">
+      <div className=" bg-gray-50 flex items-center justify-center py-[100px] px-6">
         <div className="max-w-7xl w-full grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 
           {/* Left Side: Content & Image */}

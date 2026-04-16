@@ -46,7 +46,7 @@ const SingleBlogPage = async ({ params }: Props) => {
 
   return (
     <section className="py-[100px] bg-white">
-      <div className="max-w-4xl mx-auto px-5">
+      <div className="max-w-4xl mx-auto px-6">
 
         {/* Cover Image */}
         <Image
